@@ -1,0 +1,154 @@
+{
+    "LoadingList": {
+        "Header": {
+            "Source": "SYS_A3",
+            "Destination": "SYS_BRS",
+            "SendTime": "20200925163928.321"
+        },
+        "Body": [
+            {
+                "Truck": {
+                    "BasicInfo": {
+                        "ID": {
+                            "TruckTag": "A3-A11",
+                            "SealTag": "truckseal921"
+                        },
+                        "Records": {
+                            "DeliveryTime": "20200925163928.321",
+                            "ContainerCount": 1,
+                            "GUID": "Car_truckseal921_20200925163928_1",
+                            "Location": "A3",
+                            "PDASN": "PDA-01"
+                        }
+                    },
+                    "Containers": [
+                        {
+                            "Container": {
+                                "BasicInfo": {
+                                    "ID": {
+                                        "ContainerTag": "315011",
+                                        "SealTag": "0122011"
+                                    },
+                                    "Records": {
+                                        "SealTime": "20200925163928.321",
+                                        "LoadTime": "20200925163928.321",
+                                        "BagCount": 2,
+                                        "GUID": "Container_0122011_20200925163928_2",
+                                        "Location": "A3",
+                                        "PDASN": "PDA-01"
+                                    }
+                                },
+                                "LoadedBaggage": [
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890011011"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890011012"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "Truck": {
+                    "BasicInfo": {
+                        "ID": {
+                            "TruckTag": "A3-A12",
+                            "SealTag": "truckseal922"
+                        },
+                        "Records": {
+                            "DeliveryTime": "20200925163928.321",
+                            "ContainerCount": 2,
+                            "GUID": "Car_truckseal922_20200925163928_1",
+                            "Location": "A3",
+                            "PDASN": "PDA-01"
+                        }
+                    },
+                    "Containers": [
+                        {
+                            "Container": {
+                                "BasicInfo": {
+                                    "ID": {
+                                        "ContainerTag": "315012",
+                                        "SealTag": "0122012"
+                                    },
+                                    "Records": {
+                                        "SealTime": "20200925163928.321",
+                                        "LoadTime": "20200925163928.321",
+                                        "BagCount": 3,
+                                        "GUID": "Container_0122012_20200925163928_3",
+                                        "Location": "A3",
+                                        "PDASN": "PDA-02"
+                                    }
+                                },
+                                "LoadedBaggage": [
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890012011"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890012012"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890012013"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

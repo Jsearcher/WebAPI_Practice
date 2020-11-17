@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://json-schema.brs.a3.ctci.com/Common/TruckInfo.json",
+    "additionalItems": false,
+    "title": "Truck Information Structure - Recording truck Sealing & deliveying state",
+    "description": "Basic information of a truck which is used for deliverying containers loaded with baggage from A3",
+    "type": "object",
+
+    "properties": {
+        "ID": {
+            "description": "Identification of this truck including [TruckTag] and [SealTag] for listing truck members",
+            "type": "object",
+            "properties": {
+                "TruckTag": {
+                    "$ref": "#/definitions/TruckTag"
+                },
+                "SealTag": {
+                    "$ref": "#/definitions/SealTag"
+                }
+            },
+            "required": [ "TruckTag", "SealTag" ]
+        },
+        "Records": {
+            "description": "The details of truck sealing and deliverying state",
+            "type": "object",
+            "properties": {
+                "DeliveryTime": {
+                    "$ref": "#/definitions/DeliveryTime"
+                },
+                "ContainerCount": {
+                    "$ref": "#/definitions/ContainerCount"
+                },
+                "GUID": {
+                    "$ref": "#/definitions/GUID"
+                },
+                "PDASN": {
+                    "$ref": "#/definitions/PDASN"
+                },
+                "Location": {
+                    "$ref": "#/definitions/Location"
+                }
+            },
+            "required": [ "ContainerCount" ]
+        }
+    },
+    "required": [ "ID" ],
+    "definitions": {
+        "TruckTag": {
+            "description": "License plate number of a truck",
+            "type": "string",
+            "maxLength": 30,
+            "minLength": 1
+        },
+        "SealTag": {
+            "description": "Barcode number of a sealed truck which has carried certain containers and been sealed",
+            "type": "string",
+            "maxLength": 30,
+            "minLength": 1
+        },
+        "DeliveryTime": {
+            "description": "Timestamp of deliverying the sealed containers with several baggage, e.g. 20200925163928.321 (local time)",
+            "type": [ "string", "null" ],
+            "pattern": "^\\d{14}\\.\\d{3}$"
+        },
+        "ContainerCount": {
+            "description": "Total number of containers carried in the truck",
+            "type": "integer"
+        },
+        "GUID": {
+            "description": "The Globally Unique Identifier of a truck",
+            "type": [ "string", "null" ],
+            "maxLength": 256,
+            "minLength": 1
+        },
+        "PDASN": {
+            "description": "The serial number of Personal Digital Assitant (PDA) which is used for scanning or recording the information of carried containers and sealed trucks",
+            "type": [ "string", "null" ],
+            "maxLength": 30
+        },
+        "Location": {
+            "description": "Location of a truck",
+            "type": [ "string", "null" ],
+            "maxLength": 30,
+            "minLength": 1
+        }
+    }
+}

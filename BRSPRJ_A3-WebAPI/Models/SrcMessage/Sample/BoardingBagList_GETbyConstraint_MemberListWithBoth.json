@@ -1,0 +1,227 @@
+{
+    "LoadingList": {
+        "Header": {
+            "Source": "SYS_BRS",
+            "Destination": "SYS_PDA",
+            "SendTime": "20200925163928.321"
+        },
+        "Body": [
+            {
+                "Container": {
+                    "BasicInfo": {
+                        "ID": {
+                            "ContainerTag": "315001",
+                            "SealTag": "0122001"
+                        },
+                        "Records": {
+                            "BagCount": 5,
+                            "ScannedCount": 0
+                        }
+                    },
+                    "LoadedBaggage": [
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069011",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069012",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069013",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069014",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069015",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "Container": {
+                    "BasicInfo": {
+                        "ID": {
+                            "ContainerTag": "315002",
+                            "SealTag": "0122002"
+                        },
+                        "Records": {
+                            "BagCount": 4,
+                            "ScannedCount": 0
+                        }
+                    },
+                    "LoadedBaggage": [
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890029021",
+                                    "FlightNo": "XX0002",
+                                    "STD": "0915"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890029022",
+                                    "FlightNo": "XX0002",
+                                    "STD": "0915"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890029023",
+                                    "FlightNo": "XX0002",
+                                    "STD": "0915"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890029024",
+                                    "FlightNo": "XX0002",
+                                    "STD": "0915"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "Container": {
+                    "BasicInfo": {
+                        "ID": {
+                            "ContainerTag": "315003",
+                            "SealTag": "0122003"
+                        },
+                        "Records": {
+                            "BagCount": 3,
+                            "ScannedCount": 0
+                        }
+                    },
+                    "LoadedBaggage": [
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069031",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069032",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "Baggage": {
+                                "ID": {
+                                    "BagTag": "7890069033",
+                                    "FlightNo": "XX0001",
+                                    "STD": "0820"
+                                },
+                                "Records": {
+                                    "Unloading": {
+                                        "ScanState": false
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

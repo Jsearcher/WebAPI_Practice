@@ -1,0 +1,460 @@
+{
+    "LoadingList": {
+        "Header": {
+            "Source": "SYS_BRS",
+            "Destination": "SYS_PDA",
+            "SendTime": "20200925163928.321"
+        },
+        "Body": [
+            {
+                "Truck": {
+                    "BasicInfo": {
+                        "ID": {
+                            "TruckTag": "A3-A01",
+                            "SealTag": "truckseal123"
+                        },
+                        "Records": {
+                            "DeliveryTime": "20200925163928.321",
+                            "ContainerCount": 3,
+                            "GUID": "Car_truckseal123_20200925163928_3",
+                            "Location": "A3",
+                            "PDASN": "PDA-01"
+                        }
+                    },
+                    "Containers": [
+                        {
+                            "Container": {
+                                "BasicInfo": {
+                                    "ID": {
+                                        "ContainerTag": "315001",
+                                        "SealTag": "0122001"
+                                    },
+                                    "Records": {
+                                        "SealTime": "20200925163928.321",
+                                        "LoadTime": "20200925163928.321",
+                                        "BagCount": 5,
+                                        "ScannedCount": 0,
+                                        "GUID": "Container_0122001_20200925163928_5",
+                                        "Location": "A3",
+                                        "PDASN": "PDA-01"
+                                    }
+                                },
+                                "LoadedBaggage": [
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069011",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069012",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069013",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069014",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069015",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Container": {
+                                "BasicInfo": {
+                                    "ID": {
+                                        "ContainerTag": "315002",
+                                        "SealTag": "0122002"
+                                    },
+                                    "Records": {
+                                        "SealTime": "20200925163928.321",
+                                        "LoadTime": "20200925163928.321",
+                                        "BagCount": 4,
+                                        "ScannedCount": 0,
+                                        "GUID": "Container_0122002_20200925163928_4",
+                                        "Location": "A3",
+                                        "PDASN": "PDA-01"
+                                    }
+                                },
+                                "LoadedBaggage": [
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890029021",
+                                                "FlightNo": "XX0002",
+                                                "STD": "0915"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890029022",
+                                                "FlightNo": "XX0002",
+                                                "STD": "0915"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890029023",
+                                                "FlightNo": "XX0002",
+                                                "STD": "0915"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890029024",
+                                                "FlightNo": "XX0002",
+                                                "STD": "0915"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Container": {
+                                "BasicInfo": {
+                                    "ID": {
+                                        "ContainerTag": "315003",
+                                        "SealTag": "0122003"
+                                    },
+                                    "Records": {
+                                        "SealTime": "20200925163928.321",
+                                        "LoadTime": "20200925163928.321",
+                                        "BagCount": 3,
+                                        "ScannedCount": 0,
+                                        "GUID": "Container_0122003_20200925163928_3",
+                                        "Location": "A3",
+                                        "PDASN": "PDA-01"
+                                    }
+                                },
+                                "LoadedBaggage": [
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069031",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069032",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069033",
+                                                "FlightNo": "XX0001",
+                                                "STD": "0820"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "Truck": {
+                    "BasicInfo": {
+                        "ID": {
+                            "TruckTag": "A3-A02",
+                            "SealTag": "truckseal456"
+                        },
+                        "Records": {
+                            "DeliveryTime": "20200925163928.321",
+                            "ContainerCount": 2,
+                            "GUID": "Car_truckseal456_20200925163928_2",
+                            "Location": "A3",
+                            "PDASN": "PDA-02"
+                        }
+                    },
+                    "Containers": [
+                        {
+                            "Container": {
+                                "BasicInfo": {
+                                    "ID": {
+                                        "ContainerTag": "315004",
+                                        "SealTag": "0122004"
+                                    },
+                                    "Records": {
+                                        "SealTime": "20200925163928.321",
+                                        "LoadTime": "20200925163928.321",
+                                        "BagCount": 3,
+                                        "ScannedCount": 0,
+                                        "GUID": "Container_0122004_20200925163928_3",
+                                        "Location": "A3",
+                                        "PDASN": "PDA-02"
+                                    }
+                                },
+                                "LoadedBaggage": [
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890029041",
+                                                "FlightNo": "XX0002",
+                                                "STD": "0915"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890029042",
+                                                "FlightNo": "XX0002",
+                                                "STD": "0915"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890029043",
+                                                "FlightNo": "XX0002",
+                                                "STD": "0915"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Container": {
+                                "BasicInfo": {
+                                    "ID": {
+                                        "ContainerTag": "315005",
+                                        "SealTag": "0122005"
+                                    },
+                                    "Records": {
+                                        "SealTime": "20200925163928.321",
+                                        "LoadTime": "20200925163928.321",
+                                        "BagCount": 2,
+                                        "ScannedCount": 0,
+                                        "GUID": "Container_0122005_20200925163928_2",
+                                        "Location": "A3",
+                                        "PDASN": "PDA-02"
+                                    }
+                                },
+                                "LoadedBaggage": [
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069051",
+                                                "FlightNo": "XX0003",
+                                                "STD": "1225"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "Baggage": {
+                                            "ID": {
+                                                "BagTag": "7890069052",
+                                                "FlightNo": "XX0003",
+                                                "STD": "1225"
+                                            },
+                                            "Records": {
+                                                "Loading": {
+                                                    "LoadPlace": "A3",
+                                                    "LoadTime": "20200925163928.321"
+                                                },
+                                                "Unloading": {
+                                                    "ScanState": false
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

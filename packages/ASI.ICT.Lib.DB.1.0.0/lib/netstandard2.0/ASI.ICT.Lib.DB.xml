@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASI.ICT.Lib.DB</name>
+    </assembly>
+    <members>
+        <member name="T:Lib.DB.DataBase">
+            <summary>
+            資料庫連接類別
+            </summary>
+        </member>
+        <member name="T:Lib.DB.DataBase.ProjectDB">
+            <summary>
+            靜態初始化資料庫連接物件<c>DataBase</c>實例類別
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DataBase.ProjectDB.Connect(System.String)">
+            <summary>
+            依資料庫連線字串之Server IP建立資料庫連接物件
+            </summary>
+            <param name="pConnStr">資料庫連線字串</param>
+            <returns>資料庫連線物件</returns>
+        </member>
+        <member name="M:Lib.DB.DataBase.ProjectDB.CheckBeforeConnect(System.String,System.String@)">
+            <summary>
+            在建立資料庫連接物件前先測試連線字串之Server IP是否通訊正常
+            </summary>
+            <param name="pConnStr">資料庫連線字串</param>
+            <param name="pParaName">資料庫辨別參數名稱</param>
+            <returns>連線測試狀態</returns>
+        </member>
+        <member name="F:Lib.DB.DataBase.mDisposed">
+            <summary>
+            資料庫連接物件是否釋放相關資源使用
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DataBase.Conn">
+            <summary>
+            資料庫連接物件
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DataBase.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DataBase.#ctor(System.Data.IDbConnection)">
+            <summary>
+            建構式
+            </summary>
+            <param name="pConn">資料庫連接物件</param>
+        </member>
+        <member name="M:Lib.DB.DataBase.Instance(System.String)">
+            <summary>
+            依資料庫連線字串取得實作之資料庫連接類別<c>DataBase</c>物件
+            </summary>
+            <param name="pConnStr">資料庫連線字串</param>
+            <returns>資料庫連線物件</returns>
+        </member>
+        <member name="M:Lib.DB.DataBase.Dispose">
+            <summary>
+            關閉連線
+            </summary>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DataBase.Connect(System.String)">
+            <summary>
+            連接資料庫
+            </summary>
+            <param name="pConnString">資料庫連線字串</param>
+            <returns>
+            <para> 1: 資料庫連線成功</para>
+            <para>-1: 資料庫連線錯誤</para>
+            </returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DataBase.Close">
+            <summary>
+            終止連接資料庫
+            </summary>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DataBase.IsClosed">
+            <summary>
+            判斷連接資料庫是否中斷
+            </summary>
+            <returns>
+            <para> true: 與目標資料庫連線中斷</para>
+            <para>false: 與目標資料庫連線未中斷</para>
+            </returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DataBase.SelectBySQL(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            依SQL查詢指令選擇指定欄位之資料
+            </summary>
+            <param name="pSqlStr">SQL查詢指令</param>
+            <param name="pCols">指定欄位列表</param>
+            <returns><c>DataTable</c>資料表物件</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="T:Lib.DB.DBRecord">
+            <summary>
+            資料庫資料表記錄與指令類別
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.DBOwner">
+            <summary>
+            資料庫擁有者名稱
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.TableName">
+            <summary>
+            資料庫資料表名稱
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.FullTableName">
+            <summary>
+            完整資料庫資料表名稱
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.FieldName">
+            <summary>
+            資料庫表格欄位陣列
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.SqlStr">
+            <summary>
+            目前的SQL指令字串
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.SqlCmd">
+            <summary>
+            資料庫連接物件 <c>DataBase</c> 的SQL指令物件
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.ResultSet">
+            <summary>
+            依指令讀取之資料表串流物件
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBRecord.RecordList">
+            <summary>
+            資料庫表格記錄集合物件
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DBRecord.FetchRecord(System.Data.IDataReader)">
+            <summary>
+            擷取一列資料表記錄
+            </summary>
+            <param name="pRs"><c>IDataReader</c> 資料擷取物件</param>
+            <returns>一列資料表記錄</returns>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SetRecord(System.String,System.Object)">
+            <summary>
+            新增一列資料表記錄之對應值
+            </summary>
+            <param name="pSqlStr">"INSERT INTO" SQL指令</param>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SetField(System.String)">
+            <summary>
+            設定資料表建立所需之欄位與資料型態
+            </summary>
+            <param name="pSqlStr">"CREATE TABLE" SQL指令</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:Lib.DB.DBRecord.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DBRecord.#ctor(System.Data.IDbConnection)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pConn">資料庫連接物件</param>
+        </member>
+        <member name="M:Lib.DB.DBRecord.Dispose">
+            <summary>
+            關閉並釋放 <c>IDataReader</c> 資料擷取物件
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DBRecord.Execute(System.String)">
+            <summary>
+            執行非擷取命令
+            </summary>
+            <param name="pSqlStr">"非Query類型"之SQL指令字串</param>
+            <returns>指令執行影響筆數</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.ExecuteQuery(System.String)">
+            <summary>
+            執行擷取命令
+            </summary>
+            <param name="pSqlStr">"Query類型"之SQL指令字串</param>
+            <returns>指令執行狀態</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.NextRecord">
+            <summary>
+            讀取目前資料欄位並移到下一資料欄位
+            </summary>
+            <returns>是否有下一筆資料欄位</returns>
+        </member>
+        <member name="M:Lib.DB.DBRecord.CloseQuery">
+            <summary>
+            關閉 <c>IDataReader</c> 資料擷取物件
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SelectDistinctCondition(System.String,System.String)">
+            <summary>
+            依條件擷取出單一資料表記錄(指定欄位不重複)
+            </summary>
+            <param name="pFieldName">指定欄位名稱</param>
+            <param name="pCondition">"SELECT DISTINCT" SQL指令條件</param>
+            <returns>查詢結果資料列表</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SelectMaximumCondition(System.String,System.String)">
+            <summary>
+            依條件擷取指定欄位最大值的資料表記錄
+            </summary>
+            <param name="pFieldName">指定欄位名稱</param>
+            <param name="pCondition">"SELECT MAX" SQL指令條件</param>
+            <returns>查詢結果資料列物件</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SelectMinimumCondition(System.String,System.String)">
+            <summary>
+            依條件擷取指定欄位最小值的資料表記錄
+            </summary>
+            <param name="pFieldName">指定欄位名稱</param>
+            <param name="pCondition">"SELECT MIN" SQL指令條件</param>
+            <returns>查詢結果資料列物件</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SelectTopCondition(System.Int32,System.String)">
+            <summary>
+            依條件擷取前指定筆數之資料表記錄
+            </summary>
+            <param name="pRecNo">指定筆數</param>
+            <param name="pCondition">"SELECT TOP" SQL指令條件</param>
+            <returns>查詢結果資料筆數</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SelectCountCondition(System.String,System.String)">
+            <summary>
+            依條件擷取指定欄位之資料表筆數
+            </summary>
+            <param name="pFieldName">指定欄位名稱</param>
+            <param name="pCondition">"SELECT COUNT" SQL指令條件</param>
+            <returns>指定欄位名稱與查詢結果資料筆數之集合</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SelectByCondition(System.String)">
+            <summary>
+            依條件擷取資料表記錄
+            </summary>
+            <param name="pCondition">"SELECT" SQL指令條件</param>
+            <returns>查詢結果資料筆數</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.SelectBySQL(System.String)">
+            <summary>
+            依SQL指令擷取資料表記錄
+            </summary>
+            <param name="pSqlStr">"SELECT" SQL指令</param>
+            <returns>查詢結果資料筆數</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.Insert(System.Object)">
+            <summary>
+            新增一筆資料表記錄
+            </summary>
+            <param name="pItem">單筆資料列物件</param>
+            <returns>"INSERT INTO" SQL指令執行狀態</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.DeleteByCondition(System.String)">
+            <summary>
+            依條件刪除資料表記錄
+            </summary>
+            <param name="pCondition">"DELETE FROM" SQL指令條件</param>
+            <returns>"DELETE FROM" SQL指令執行狀態</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.CreateTable">
+            <summary>
+            建立資料表
+            </summary>
+            <returns>"CREATE TABLE" SQL指令執行狀態</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.DropTable">
+            <summary>
+            清除資料表
+            </summary>
+            <returns>"DROP TABLE" SQL指令執行狀態</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.GetValueOrDefault``1(System.Data.IDataReader,System.String)">
+            <summary>
+            依輸入的"欄位名稱"讀取資料表列的欄位值
+            </summary>
+            <typeparam name="T">欄位的資料型態</typeparam>
+            <param name="pResultSet">目前讀取的資料表列物件</param>
+            <param name="pFieldName">欄位名稱</param>
+            <returns>
+            <para>對應"欄位名稱"之資料表列的欄位值</para>
+            <para>欄位的資料型態為"String"且為空值，則回傳空字串(string.Empty)</para>
+            </returns>
+        </member>
+        <member name="M:Lib.DB.DBRecord.GetValueOrDefault``1(System.Data.IDataReader,System.Int32)">
+            <summary>
+            依輸入的"欄位索引值"讀取資料表列的欄位值
+            </summary>
+            <typeparam name="T">欄位的資料型態</typeparam>
+            <param name="pResultSet">目前讀取的資料表列物件</param>
+            <param name="pOrdinal">欄位索引值</param>
+            <returns>
+            <para>對應"欄位索引值"之資料表列的欄位值</para>
+            <para>欄位的資料型態為"String"且為空值，則回傳空字串(string.Empty)</para>
+            </returns>
+        </member>
+        <member name="M:Lib.DB.DBRecord.AddParameter(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            新增一指定資料型態的欄位資料
+            </summary>
+            <param name="pParaName">欄位名稱</param>
+            <param name="pValue">欄位值</param>
+            <param name="pType">欄位資料型態</param>
+            <returns>新增執行狀態</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="M:Lib.DB.DBRecord.AddParameter(System.String,System.Object)">
+            <summary>
+            新增一欄位資料
+            </summary>
+            <param name="pParaName">欄位名稱</param>
+            <param name="pValue">欄位值</param>
+            <returns>新增執行狀態</returns>
+            <exception cref="T:System.Exception">拋回例外錯誤</exception>
+        </member>
+        <member name="T:Lib.DB.DBTransaction">
+            <summary>
+            資料庫存取交易類別
+            </summary>
+        </member>
+        <member name="T:Lib.DB.DBTransaction.TransactionUnit">
+            <summary>
+            資料庫存取交易單元類別
+            <list type="bullet"><c>dbTransaction</c>: 記錄與執行資料庫存取交易過程之物件</list>
+            <list type="bullet"><c>Result</c>: 存取執行成功受影響的資料筆數</list>
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBTransaction.TransactionUnit.InsTransaction">
+            <summary>
+            資料庫存取交易物件
+            </summary>
+        </member>
+        <member name="P:Lib.DB.DBTransaction.TransactionUnit.Result">
+            <summary>
+            資料庫存取交易影響資料列筆數結果
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DBTransaction.TransactionUnit.#ctor(System.Data.IDbTransaction,System.Int32)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pDbTran">資料庫存取交易物件(BeginTransaction)</param>
+            <param name="pInitR">資料庫存取交易影響資料列筆數初始值(0)</param>
+        </member>
+        <member name="P:Lib.DB.DBTransaction.TranRegistryCollection">
+            <summary>
+            各資料庫資料表存取交易物件之管理集合
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DBTransaction.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Lib.DB.DBTransaction.BeginTransaction(Lib.DB.DBRecord)">
+            <summary>
+            資料庫存取交易開始
+            </summary>
+            <param name="pTable">資料庫資料表記錄與指令物件</param>
+        </member>
+        <member name="M:Lib.DB.DBTransaction.SetTransactionResult(Lib.DB.DBRecord,System.Int32)">
+            <summary>
+            變更對應資料庫存取交易物件之影響資料列筆數
+            </summary>
+            <param name="pTable">資料庫資料表記錄與指令物件</param>
+            <param name="pResult">資料庫存取交易影響資料列筆數</param>
+        </member>
+        <member name="M:Lib.DB.DBTransaction.EndTransaction">
+            <summary>
+            完成資料庫存取交易動作
+            </summary>
+            <returns>各資料庫資料表存取交易動作處理結果</returns>
+        </member>
+    </members>
+</doc>

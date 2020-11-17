@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://json-schema.brs.a3.ctci.com/Common/Header.json",
+    "additionalItems": false,
+    "title": "A header in transmitted messages - Representing message source, destination, and sending time",
+    "type": "object",
+
+    "properties": {
+        "Source": {
+            "$ref": "#/definitions/Source"
+        },
+        "Destination": {
+            "$ref": "#/definitions/Destination"
+        },
+        "SendTime": {
+            "$ref": "#/definitions/SendTime"
+        }
+    },
+    "required": [
+        "Source",
+        "Destination",
+        "SendTime"
+    ],
+    "definitions": {
+        "Source": {
+            "description": "Message sender, who sends the message",
+            "type": "string",
+            "maxLength": 10
+        },
+        "Destination": {
+            "description": "Message receiver, who receives the message",
+            "type": "string",
+            "maxLength": 10
+        },
+        "SendTime": {
+            "description": "Timestamp of the associated message that is prepared for sending by the sending system, e.g. 20200925163928.321 (local time)",
+            "type": "string",
+            "pattern": "^\\d{14}.\\d{3}$"
+        }
+    }
+}

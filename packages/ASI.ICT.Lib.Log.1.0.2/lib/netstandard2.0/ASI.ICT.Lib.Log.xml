@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASI.ICT.Lib.Log</name>
+    </assembly>
+    <members>
+        <member name="T:Lib.Log.DebugLog">
+            <summary>
+            日誌訊息記錄類別[DEBUG]
+            </summary>
+        </member>
+        <member name="M:Lib.Log.DebugLog.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.DebugLog.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pComputer">工作站主機名稱</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.DebugLog.Log(System.String,System.String,System.String)">
+            <summary>
+            記錄[DEBUG]錯誤訊息
+            </summary>
+            <param name="pSubDirectory">Log分層目錄</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+            <param name="pMessage">記錄之字串訊息</param>
+        </member>
+        <member name="T:Lib.Log.ErrorLog">
+            <summary>
+            日誌訊息記錄類別[ERROR]
+            </summary>
+        </member>
+        <member name="M:Lib.Log.ErrorLog.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.ErrorLog.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pComputer">工作站主機名稱</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.ErrorLog.Log(System.String,System.String,System.String)">
+            <summary>
+            記錄[ERROR]錯誤訊息
+            </summary>
+            <param name="pSubDirectory">Log分層目錄</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+            <param name="pMessage">記錄之字串訊息</param>
+        </member>
+        <member name="M:Lib.Log.ErrorLog.Log(System.String,System.Exception)">
+            <summary>
+            記錄[ERROR]錯誤訊息
+            </summary>
+            <param name="pProcess">執行程序、任務名稱</param>
+            <param name="pException">記錄之例外錯誤</param>
+        </member>
+        <member name="T:Lib.Log.InfoLog">
+            <summary>
+            日誌訊息記錄類別[INFO]
+            </summary>
+        </member>
+        <member name="M:Lib.Log.InfoLog.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.InfoLog.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pComputer">工作站主機名稱</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.InfoLog.Log(System.String,System.String,System.String)">
+            <summary>
+            記錄[INFO]一般訊息(Stack)
+            </summary>
+            <param name="pSubDirectory">Log分層目錄</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+            <param name="pMessage">記錄之字串訊息</param>
+        </member>
+        <member name="M:Lib.Log.InfoLog.LogHyperText(System.String,System.String,System.String,System.Byte[],System.Int32)">
+            <summary>
+            寫入指定的內容(檔名格式:[yyyyMMdd].[pProcess]x.log || [pComputer].[yyyyMMdd].[pProcess]x.log)
+            </summary>
+            <param name="pComputer">工作站主機名稱</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+            <param name="pPrefix">字串訊息前綴</param>
+            <param name="pText">Byte格式記錄之字串訊息</param>
+            <param name="pCount">記錄之字串訊息字元數</param>
+        </member>
+        <member name="T:Lib.Log.LogBase">
+            <summary>
+            日誌訊息記錄類別
+            </summary>
+        </member>
+        <member name="F:Lib.Log.LogBase.mFileName">
+            <summary>
+            Log檔案名稱(*.log)
+            </summary>
+        </member>
+        <member name="F:Lib.Log.LogBase.LEVEL">
+            <summary>
+            Log記錄層級
+            </summary>
+        </member>
+        <member name="F:Lib.Log.LogBase.FileDirectory">
+            <summary>
+            Log檔案目錄
+            </summary>
+            <remarks>預設為".\Log\"</remarks>
+        </member>
+        <member name="M:Lib.Log.LogBase.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.LogBase.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSubDirectory">Log分層目錄</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+        </member>
+        <member name="M:Lib.Log.LogBase.Log(System.String)">
+            <summary>
+            記錄訊息字串
+            </summary>
+            <param name="pMessage">記錄之字串訊息</param>
+        </member>
+        <member name="M:Lib.Log.LogBase.Log(System.String,System.String,System.String)">
+            <summary>
+            記錄[INFO]一般訊息(Stack)
+            </summary>
+            <param name="pSubDirectory">Log分層目錄</param>
+            <param name="pProcess">執行程序、任務名稱</param>
+            <param name="pMessage">記錄之字串訊息</param>
+        </member>
+        <member name="M:Lib.Log.LogBase.Display(System.String)">
+            <summary>
+            由console顯示指定內容
+            </summary>
+            <param name="pMessage">記錄之字串訊息</param>
+        </member>
+        <member name="M:Lib.Log.LogBase.DelLogDir(System.DateTime,System.Int32)">
+            <summary>
+            將"Log/"路徑下指定日期時間(<c>pTime</c>)起、指定回推天數(<c>pDays</c>)之前的所有日期目錄刪除
+            </summary>
+            <param name="pTime">指定的日期時間</param>
+            <param name="pDays">指定回推天數</param>
+            <returns>
+            <para> 1: 刪除日期目錄成功</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+        </member>
+        <member name="M:Lib.Log.LogBase.DelLogFile(System.DateTime,System.Int32)">
+            <summary>
+            將"Log/"路徑下指定日期時間(pTime)起、指定回推天數(pDays)之前的所有Log檔案刪除
+            </summary>
+            <param name="pTime">指定的日期時間</param>
+            <param name="pDays">指定回推天數</param>
+            <returns>
+            <para> 1: 刪除Log檔案成功</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+        </member>
+        <member name="M:Lib.Log.LogBase.GetStackTrackInfo">
+            <summary>
+            取得程式除錯(debugging)的呼叫堆疊(stack trace)資訊以作為log內容標示
+            </summary>
+            <returns>"呼叫方法的類別"."方法成員的名稱"@"該方法成員的物件全名": 方法所在行數</returns>
+        </member>
+        <member name="T:Lib.Log.TextFile">
+            <summary>
+            文字類型檔案處理類別，目前可處理類型為：
+            <list type="bullet">*.txt</list>
+            <list type="bullet">*.log</list>
+            </summary>
+        </member>
+        <member name="M:Lib.Log.TextFile.WriteRecords(System.String,System.String)">
+            <summary>
+            將字串訊息記錄至指定檔案中[Append]
+            </summary>
+            <param name="pFile">指定的檔案名稱(*.txt, *.log)</param>
+            <param name="pRecs">字串訊息</param>
+            <returns>
+            <para>1: 記錄執行成功</para>
+            <para>0: 記錄執行失敗</para>
+            </returns>
+        </member>
+    </members>
+</doc>

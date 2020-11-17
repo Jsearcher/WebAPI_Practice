@@ -1,0 +1,37 @@
+{
+    "LoadingList": {
+        "Header": {
+            "Source": "SYS_PDA",
+            "Destination": "SYS_BRS",
+            "SendTime": "20200925163928.321"
+        },
+        "Body": [
+            {
+                "Baggage": {
+                    "ID": {
+                        "BagTag": "7890011999"
+                    },
+                    "Records": {
+                        "Loading": {
+                            "LoadPlace": "T2",
+                            "LoadTime": "20200925163928.321"
+                        }
+                    }
+                }
+            },
+            {
+                "Baggage": {
+                    "ID": {
+                        "BagTag": "7890011998"
+                    },
+                    "Records": {
+                        "Loading": {
+                            "LoadPlace": "T2",
+                            "LoadTime": "20200925163928.321"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

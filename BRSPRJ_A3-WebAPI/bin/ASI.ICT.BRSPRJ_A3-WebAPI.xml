@@ -1,0 +1,1887 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASI.ICT.BRSPRJ_A3-WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,BRSPRJ_A3_WebAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,BRSPRJ_A3_WebAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},BRSPRJ_A3_WebAPI.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(BRSPRJ_A3_WebAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,BRSPRJ_A3_WebAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:BRSPRJ_A3_WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BRSPRJ_A3_WebAPI.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController">
+            <summary>
+            A3行李裝載資訊服務API
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.T1BRSDB_ConnStr">
+            <summary>
+            T1BRSDB供此Web API使用之資料庫連線參數
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.T2BRSDB_ConnStr">
+            <summary>
+            T2BRSDB供此Web API使用之資料庫連線參數
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SYS_BRS">
+            <summary>
+            提供此Web API之服務系統名稱
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SYS_PDA">
+            <summary>
+            使用此Web API服務以完成行李謝載確認作業之PDA操作系統名稱
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.JSDDirStr">
+            <summary>
+            Json schema檔案之目錄字串
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.Service_Mode">
+            <summary>
+            Web Service執行模式
+            </summary>
+            <remarks>
+            <para>0: 表示為測試模式</para>
+            <para>1: 表示為正式運行模式</para>
+            </remarks>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.TestDate">
+            <summary>
+            Web Service執行模式為測試模式時，所使用的測試日期，格式為"yyyy-MM-dd"
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.FlightNo_Default">
+            <summary>
+            行李關聯所屬航班編號之預設值
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.STD_Default">
+            <summary>
+            行李關聯所屬航班表訂出境時間之預設值
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.PDASN_Abnormal">
+            <summary>
+            用於異常行李輸入使用之PDA流水號
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.T_Tag_Abnormal">
+            <summary>
+            異常行李輸入使用之配送車的車牌號碼
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.T_STag_Abnormal">
+            <summary>
+            異常行李輸入使用之配送車的封籤條碼編號
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.C_Tag_Abnormal">
+            <summary>
+            異常行李輸入使用之容器(籠車)的條碼編號
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.C_STag_Abnormal">
+            <summary>
+            異常行李輸入使用之容器(籠車)的封籤條碼編號
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetAllLoadingBag(System.String)">
+            <summary>
+            取得指定日期(系統時間)所有已裝載之A3行李資訊列表
+            </summary>
+            <param name="queryDate">資料查詢日期，需符合"yyyy-MM-dd"規則</param>
+            <remarks>BoardingBagList訊息包含：
+            <para>Header - 傳送來源、目的地與傳送時間</para>
+            <para>Body - 配送車(列表) -> 運送哪些籠車(列表) -> 裝載哪些行李(列表)</para>
+            </remarks>
+            <returns>傳送訊息(BoardingBagList)</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            依指定條件參數取得今日(系統時間)已裝載之A3行李資訊列表
+            </summary>
+            <remarks>BoardingBagList訊息包含：
+            <para>Header - 傳送來源、目的地與傳送時間</para>
+            <para>Body - 配送車(列表) -> 運送哪些籠車(列表) -> 裝載哪些行李(列表)</para>
+            </remarks>
+            <param name="queryDate">資料查詢日期，需符合"yyyy-MM-dd"規則</param>
+            <param name="QueryType">取得資訊清單所需之指定對象類型，作為基本查詢條件，包含
+            <para>truck: 指定對象為配送車</para>
+            <para>container: 指定對象為容器(籠車)</para>
+            <para>baggage: 指定對象為裝載行李</para>
+            </param>
+            <param name="id">是否以指定對象類型之所屬為查詢條件
+            <para>0: 以指定對象類型(如container)作為查詢條件</para>
+            <para>1: 以指定對象類型(如container)之所屬(truck)作為查詢條件，參數可為非0</para>
+            </param>
+            <param name="ListType">清單中所需取得的資訊類型，包含
+            <para>baggage: 僅需裝載行李之資訊清單</para>
+            <para>container: 僅需運送容器(籠車)之資訊清單</para>
+            <para>both: 運送容器(籠車)及其裝載行李之資訊清單</para>
+            <para>all: 配送車、所運送容器(籠車)及其裝載行李之資訊清單</para>
+            </param>
+            <param name="level">資訊清單的內容程度
+            <para>0: 依取得的資訊類型(<c>ListType</c>)需求，簡列查詢結果清單</para>
+            <para>1: 依取得的資訊類型(<c>ListType</c>)需求，詳列查詢結果清單，參數可為非0</para>
+            </param>
+            <param name="Tag">依指定對象類型之查詢條件(<c>QueryType</c>及<c>id</c>)而定的編碼條件，如ContainerTag</param>
+            <param name="SealTag">依指定對象類型之查詢條件(<c>QueryType</c>及<c>id</c>)而定的編碼條件，如ContainerSealTag，也可能不使用(預設為null)</param>
+            <returns>傳送訊息(BoardingBagList)</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetUnloadingBagState(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            依行李清單設定今日(系統時間)已裝載之A3行李掃描確認狀態
+            </summary>
+            <param name="bagList">Json格式之行李裝載資訊列表字串(BoardingBagList)</param>
+            <returns>回應設定狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetNewLoadingBagList(Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            依行李清單新增今日(系統時間)已裝載之A3行李資訊(包含異常行李)
+            </summary>
+            <param name="bagList">Json格式之行李裝載資訊列表字串(BoardingBagList)</param>
+            <param name="ProcType">新的A3裝載行李資訊新增之處理方式，包含
+            <para>source: 行李資訊是由A3站即行李裝載源頭所產生，"BoardingBagList"需具備完整的"Body - 配送車(列表) -> 運送哪些籠車(列表) -> 裝載哪些行李(列表)"</para>
+            <para>informal: 非正規(上述由源頭所產生)方式所裝載運送之行李，"BoardingBagList"僅需簡單的"Baggage"裝載運送行李之基本資訊，將以指定值設定其作資料儲存所需關聯之容器(籠車)與配送車</para>
+            </param>
+            <returns>回應新增狀態</returns>
+            <remarks>[ContainerTag]=X9999X,[ContainerSealTag]=CX9999X,[TruckTag]=A3-999,[TruckSealTag]=TX9999X,[PDASN]=PDA_X9，強制裝載用</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.Init_BoardingBagList(System.String,System.String)">
+            <summary>
+            初始化傳遞訊息BoardingBagList物件
+            </summary>
+            <param name="pSource">訊息傳送來源</param>
+            <param name="pDestination">訊息傳送目的地</param>
+            <returns>傳遞訊息BoardingBagList物件</returns>
+            <remarks>另填入<c>Body</c>內容列表</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.Init_Body(BRSPRJ_A3_WebAPI.Models.SrcMessage.BodyChoice)">
+            <summary>
+            初始化傳遞訊息BoardingBagList之內容物件
+            </summary>
+            <param name="choice">訊息內容種類之列舉項目</param>
+            <returns>傳遞訊息BoardingBagList之內容物件</returns>
+            <remarks>另填入<c>Containers</c>已封籤容器(籠車)物件列表 或 填入<c>LoadedBaggage</c>所裝載之行李物件列表</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.Init_Containers">
+            <summary>
+            初始化已封籤容器(籠車)物件
+            </summary>
+            <returns>已封籤容器(籠車)物件</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.Init_LoadedBaggage">
+            <summary>
+            初始化所裝載之行李物件
+            </summary>
+            <returns>所裝載之行李物件</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig">
+            <summary>
+            WEB應用程式中 <c>web.config</c> 組態設定("WebConfigSetting")之處理類別
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropSection">
+            <summary>
+            組態設定檔區段之內容定義類別
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropSection.DBCollection">
+            <summary>
+            DB相關組態設定成員集合名稱
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropSection.BasicCollection">
+            <summary>
+            基本組態設定成員集合名稱
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropSection.DBPropCollection">
+            <summary>
+            DB相關組態設定成員集合
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropSection.BasicPropCollection">
+            <summary>
+            基本組態設定成員集合
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropSection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropElement">
+            <summary>
+            組態設定成員內容之定義類別
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropElement.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropElement.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="key">組態設定標籤</param>
+            <param name="value">組態設定值</param>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropsCollection">
+            <summary>
+            組態設定成員集合之定義類別
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropsCollection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting">
+            <summary>
+            系統組態設定(Web.config)相關處理類別
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.LazyHolder">
+            <summary>
+            靜態初始化通用物件實體類別
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.LazyHolder.INSTANCE">
+            <summary>
+            <c>WebPropertySetting</c> 通用物件實體
+            </summary>
+            <remarks>預設組態設定檔案"Web.json"位置為工作目錄，且系統組態設定檔之區段路徑為"WebConfigSetting"</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfigPath">系統組態設定檔之檔案路徑名稱</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.#ctor(System.String,System.Configuration.Configuration)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfig">目前的組態設定檔案</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.Instance">
+            <summary>
+            取得系統組態設定(Web.config)物件實體
+            </summary>
+            <returns><c>WebPropertySetting</c> 通用物件實體</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.AddProperty(System.Object,System.String)">
+            <summary>
+            新增特定型態之組態設定成員至組態設定集合
+            </summary>
+            <param name="elememnt">特定型態之組態設定成員</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.ContainsKey(System.String)">
+            <summary>
+            確認組態設定檔區段之內容是否包含標籤名稱(key)
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>標籤名稱(key)確認包含狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.GetAllPropertyNames">
+            <summary>
+            取得組態設定檔區段之內容中所有標簽名稱(key)
+            </summary>
+            <returns>組態設定標籤清單</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.GetProperty(System.String)">
+            <summary>
+            依標籤名稱(key)取得組態設定檔區段內容之設定值
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>對應標籤名稱(key)的組態設定值</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.SetProperty(System.String,System.String)">
+            <summary>
+            將標籤名稱(key)的組態設定檔區段內容之設定值變更
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="value">欲變更組態設定檔區段內容之設定值</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.GetPropSection(System.String)">
+            <summary>
+            建立並取得指定組態設定檔區段之內容定義物件
+            </summary>
+            <param name="pSectionName">指定的系統組態設定檔之區段名稱</param>
+            <returns>指定組態設定檔區段之內容定義物件</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.RemoveAllProperties">
+            <summary>
+            自組態設定集合移除所有組態設定成員
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.RemoveProperty(System.String,System.String)">
+            <summary>
+            自組態設定集合依標籤名稱(key)移除特定型態組態設定成員
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.GetConfigurationFile">
+            <summary>
+            取得並更新目前的組態設定檔案物件
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.CreateCustomSection">
+            <summary>
+            建立並儲存 <c>AppPropElement</c> 組態設定檔案所需之區段
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding">
+            <summary>
+            "BAG_BOARDING"資料表類別
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row">
+            <summary>
+            資料表欄位物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.BAG_TAG">
+            <summary>
+            行李條碼編號
+            </summary>
+            <remarks>為A3BagPreBoarding資料表的[BagBarCode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.BSM_DATE">
+            <summary>
+            行李所屬航班之作業日期
+            </summary>
+            <remarks>將以該筆資料接收之系統日期(Local)作記錄</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.CONTAINER_TAG">
+            <summary>
+            裝載此件行李之容器(籠車)的條碼編號
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[Containerbarcode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.CONTAINER_SEAL_TAG">
+            <summary>
+            裝載此件行李之容器(籠車)的封籤條碼編號
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[ContainerSealbarcode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.BAG_LOAD_PLACE">
+            <summary>
+            將此件行李裝載至容器(籠車)的地點、位置，例如：A3
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.BAG_LOAD_TIME">
+            <summary>
+            將此件行李裝載至容器(籠車)的時間，格式為yyyy-MM-dd HH:mm:ss.fff
+            </summary>
+            <remarks>為A3BagPreBoarding資料表的[LOADBag_TS]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.SCAN_STATE">
+            <summary>
+            此件行李是否已從裝載之容器(籠車)取出並使用手持機掃瞄確認
+            </summary>
+            <remarks>
+            <para>'true'表示已掃描確認</para>
+            <para>'false'表示尚未掃描確認或該件行李遺失、不在裝載之容器(籠車)中</para>
+            </remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.SCAN_OPERATOR">
+            <summary>
+            將此件行李從裝載之容器(籠車)取出並使用手持機掃瞄確認，或是於裝載之容器(籠車)中未發現此件行李的作業人員
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.SCAN_TIME">
+            <summary>
+            將此件行李從裝載之容器(籠車)取出並使用手持機掃瞄確認，或是於裝載之容器(籠車)中未發現此件行李的時間，格式為yyyyMMddHHmmss.fff
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Row.UPDATE_TIME">
+            <summary>
+            資料列變動時間，格式為yyyy-MM-dd HH:mm:ss.fff
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.#ctor(System.Data.IDbConnection)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pConn">資料庫連接物件</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.FetchRecord(System.Data.IDataReader)">
+            <summary>
+            擷取一列資料表記錄
+            </summary>
+            <param name="pRs"><c>IDataReader</c>資料擷取物件</param>
+            <returns>一列資料表記錄</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.SetRecord(System.String,System.Object)">
+            <summary>
+            新增一列資料表記錄之對應值
+            </summary>
+            <param name="pSqlStr">"INSERT INTO" SQL指令</param>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.SetField(System.String)">
+            <summary>
+            設定資料表建立所需之欄位與資料型態
+            </summary>
+            <param name="pSqlStr">"CREATE TABLE" SQL指令</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.SelectByLoadDate(System.String)">
+            <summary>
+            依據[BAG_LOAD_TIME]篩選[dbo.BAG_BOARDING]資料表
+            </summary>
+            <param name="pLDate">行李裝載日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.SelectByKey(System.String,System.String)">
+            <summary>
+            依據[BAG_TAG], [BAG_LOAD_TIME]篩選[dbo.BAG_BOARDING]資料表
+            </summary>
+            <param name="pBagTag">行李條碼編號</param>
+            <param name="pLDate">行李裝載日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.SelectByContainer(System.String,System.String,System.String)">
+            <summary>
+            依據[CONTAINER_TAG], [CONTAINER_SEAL_TAG], [BAG_LOAD_TIME]篩選[dbo.BAG_BOARDING]資料表
+            </summary>
+            <param name="pContainerTag">裝載行李之容器(籠車)的條碼編號</param>
+            <param name="pSealTag">裝載行李之容器(籠車)的封籤條碼編號</param>
+            <param name="pLDate">行李裝載日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.BagBoarding.Update(System.Object)">
+            <summary>
+            更新一筆資料表記錄
+            </summary>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>"UPDATE SET" SQL指令執行狀態</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo">
+            <summary>
+            "CONTAINER_INFO"資料表類別
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row">
+            <summary>
+            資料表欄位物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.CONTAINER_TAG">
+            <summary>
+            裝載行李之容器(籠車)的條碼編號
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[Containerbarcode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.CONTAINER_SEAL_TAG">
+            <summary>
+            裝載行李之容器(籠車)的封籤條碼編號
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[ContainerSealbarcode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.CONTAINER_SEAL_TIME">
+            <summary>
+            將裝載行李之容器(籠車)貼上封籤條碼之時間，格式為yyyy-MM-dd HH:mm:ss.fff
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[SealContainer_TS]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.TRUCK_TAG">
+            <summary>
+            裝載此已封籤容器(籠車)之配送車的車牌號碼
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[LicensePlateNumber]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.TRUCK_SEAL_TAG">
+            <summary>
+            裝載此已封籤容器(籠車)之配送車的封籤條碼編號
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[CarSealbarcode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.BAG_LOADED">
+            <summary>
+            此已封籤容器(籠車)所裝載之行李數量
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[intBagInContainer]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.CONTAINER_LOAD_TIME">
+            <summary>
+            將此已封籤容器(籠車)裝載至配送車的時間，格式為yyyy-MM-dd HH:mm:ss.fff
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[LOADContainer_TS]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.SEAL_GROUP_CODE">
+            <summary>
+            此已封籤容器(籠車)之全域唯一識別碼
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[SealGroupcode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.SEAL_PDASN">
+            <summary>
+            掃描此已封籤容器(籠車)之手持機序列號碼
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[SealPDASN]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.LOCATION">
+            <summary>
+            未知
+            </summary>
+            <remarks>為A3SealContainerInfo資料表的[Location]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Row.UPDATE_TIME">
+            <summary>
+            資料列變動時間，格式為yyyy-MM-dd HH:mm:ss.fff
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.#ctor(System.Data.IDbConnection)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pConn">資料庫連接物件</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.FetchRecord(System.Data.IDataReader)">
+            <summary>
+            擷取一列資料表記錄
+            </summary>
+            <param name="pRs"><c>IDataReader</c>資料擷取物件</param>
+            <returns>一列資料表記錄</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.SetRecord(System.String,System.Object)">
+            <summary>
+            新增一列資料表記錄之對應值
+            </summary>
+            <param name="pSqlStr">"INSERT INTO" SQL指令</param>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.SetField(System.String)">
+            <summary>
+            設定資料表建立所需之欄位與資料型態
+            </summary>
+            <param name="pSqlStr">"CREATE TABLE" SQL指令</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.SelectByLoadDate(System.String)">
+            <summary>
+            依據[CONTAINER_LOAD_TIME]篩選[dbo.CONTAINER_INFO]資料表
+            </summary>
+            <param name="pLDate">容器(籠車)裝載至配送車日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.SelectByKey(System.String,System.String,System.String)">
+            <summary>
+            依據[CONTAINER_TAG], [CONTAINER_SEAL_TAG], [CONTAINER_LOAD_TIME]篩選[dbo.CONTAINER_INFO]資料表
+            </summary>
+            <param name="pTag">容器(籠車)的條碼編號</param>
+            <param name="pSealTag">容器(籠車)的封籤條碼編號</param>
+            <param name="pLDate">容器(籠車)裝載至配送車日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.ContainerInfo.Update(System.Object)">
+            <summary>
+            更新一筆資料表記錄
+            </summary>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>"UPDATE SET" SQL指令執行狀態</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo">
+            <summary>
+            "TRUCK_INFO"資料表類別
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row">
+            <summary>
+            資料表欄位物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.TRUCK_TAG">
+            <summary>
+            裝載已封籤容器(籠車)之配送車的車牌號碼
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[LicensePlateNumber]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.TRUCK_SEAL_TAG">
+            <summary>
+            裝載已封籤容器(籠車)之配送車的封籤條碼編號
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[CarSealbarcode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.CONTAINER_LOADED">
+            <summary>
+            此已封籤配送車所裝載之已封籤容器(籠車)數量
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[intContainerInCart]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.DELIVERY_TIME">
+            <summary>
+            裝載已封籤容器(籠車)之配送車出貨的時間，格式為yyyy-MM-dd HH:mm:ss.fff
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[Delivery_TS]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.DELIVERY_GROUP_CODE">
+            <summary>
+            此已封籤配送車之全域唯一識別碼
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[DeliveryGroupCode]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.DELIVERY_PDASN">
+            <summary>
+            掃描此已封籤配送車之手持機序列號碼
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[DeliveryPDASN]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.LOCATION">
+            <summary>
+            未知
+            </summary>
+            <remarks>為A3SealCarInfo資料表的[Location]欄位</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Row.UPDATE_TIME">
+            <summary>
+            資料列變動時間，格式為yyyy-MM-dd HH:mm:ss.fff
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.#ctor(System.Data.IDbConnection)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pConn">資料庫連接物件</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.FetchRecord(System.Data.IDataReader)">
+            <summary>
+            擷取一列資料表記錄
+            </summary>
+            <param name="pRs"><c>IDataReader</c>資料擷取物件</param>
+            <returns>一列資料表記錄</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.SetRecord(System.String,System.Object)">
+            <summary>
+            新增一列資料表記錄之對應值
+            </summary>
+            <param name="pSqlStr">"INSERT INTO" SQL指令</param>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.SetField(System.String)">
+            <summary>
+            設定資料表建立所需之欄位與資料型態
+            </summary>
+            <param name="pSqlStr">"CREATE TABLE" SQL指令</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.SelectByLoadDate(System.String)">
+            <summary>
+            依據[DELIVERY_TIME]篩選[dbo.TRUCK_INFO]資料表
+            </summary>
+            <param name="pLDate">配送車運送日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.SelectByKey(System.String,System.String,System.String)">
+            <summary>
+            依據[TRUCK_TAG], [TRUCK_SEAL_TAG], [DELIVERY_TIME]篩選[dbo.TRUCK_INFO]資料表
+            </summary>
+            <param name="pTag">配送車的車牌號碼</param>
+            <param name="pSealTag">配送車的封籤條碼編號</param>
+            <param name="pLDate">配送車運送日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.Update(System.Object)">
+            <summary>
+            更新一筆資料表記錄
+            </summary>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>"UPDATE SET" SQL指令執行狀態</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day">
+            <summary>
+            "BAG_BOARDING"資料表類別
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row">
+            <summary>
+            資料表欄位物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BAG_TAG">
+            <summary>
+            行李條碼編號
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BSM_FLIGHT">
+            <summary>
+            行李所屬航班編號
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BSM_DATE">
+            <summary>
+            行李所屬航班之作業日期，格式為yyyyMMdd
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.DESTINATION">
+            <summary>
+            行李所屬航班目的地
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.CABIN_CLASS">
+            <summary>
+            行李所屬航班艙等
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.PASSENGER">
+            <summary>
+            行李所屬旅客姓名
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.SEAT">
+            <summary>
+            行李所屬旅客座位
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.AUTH_LOAD">
+            <summary>
+            行李裝載許可
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.AUTH_TRANSPORT">
+            <summary>
+            行李運送許可
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BSM_STATE">
+            <summary>
+            行李處理狀態
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BAG_FLIGHT">
+            <summary>
+            行李裝載航班
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BAG_DATE">
+            <summary>
+            行李裝載日期，格式為yyyyMMdd
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.CART_ID">
+            <summary>
+            行李裝載籠車編號
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BAG_STATE">
+            <summary>
+            行李裝載狀態
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.UPD_USER">
+            <summary>
+            資料列變動人員
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.UPD_TIME">
+            <summary>
+            資料列變動時間，格式為yyyyMMddHHmmss
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.BSM_SOURCE">
+            <summary>
+            行李BSM訊息字串
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.OP_Attribute">
+            <summary>
+            非目標欄位
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.NEXT_FLIGHT">
+            <summary>
+            非目標欄位
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.FINAL_DEST">
+            <summary>
+            非目標欄位
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.PREV_FLIGHT">
+            <summary>
+            非目標欄位
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.SECURITY_NO">
+            <summary>
+            非目標欄位
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.TRAVELLER_ID">
+            <summary>
+            非目標欄位
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Row.TIER_ID">
+            <summary>
+            非目標欄位
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.#ctor(System.Data.IDbConnection)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pConn">資料庫連接物件</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.FetchRecord(System.Data.IDataReader)">
+            <summary>
+            擷取一列資料表記錄
+            </summary>
+            <param name="pRs"><c>IDataReader</c>資料擷取物件</param>
+            <returns>一列資料表記錄</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.SetRecord(System.String,System.Object)">
+            <summary>
+            新增一列資料表記錄之對應值
+            </summary>
+            <param name="pSqlStr">"INSERT INTO" SQL指令</param>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.SetField(System.String)">
+            <summary>
+            設定資料表建立所需之欄位與資料型態
+            </summary>
+            <param name="pSqlStr">"CREATE TABLE" SQL指令</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.SelectByKey(System.String,System.String)">
+            <summary>
+            依據[BAG_TAG], [BSM_DATE]篩選[dbo.BSM_2DAY]資料表
+            </summary>
+            <param name="pBagTag">行李條碼編號</param>
+            <param name="pDate">行李所屬航班作業日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.BSM2Day.Update(System.Object)">
+            <summary>
+            更新一筆資料表記錄
+            </summary>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>"UPDATE SET" SQL指令執行狀態</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day">
+            <summary>
+            "BAG_BOARDING"資料表類別
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row">
+            <summary>
+            資料表欄位物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.FLIGHT_NO">
+            <summary>
+            航班編號
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.DATE_TIME">
+            <summary>
+            航班之作業日期，格式為yyyyMMdd
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.TYPE">
+            <summary>
+            航班出入境狀態
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.STD">
+            <summary>
+            航班表定出(入)境時間
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.ETD">
+            <summary>
+            航班預計出(入)境時間
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.ATD">
+            <summary>
+            航班實際出(入)境時間
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.DESTINATION">
+            <summary>
+            航班目的地(來源地)
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.PLANE">
+            <summary>
+            航班機型
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.STATUS">
+            <summary>
+            航班作業狀態
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.UPD_USER">
+            <summary>
+            資料列變動人員
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.UPD_TIME">
+            <summary>
+            資料列變動時間，格式為yyyyMMddHHmmss
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Row.UPD_TYPE">
+            <summary>
+            資料列更異動狀態
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.#ctor(System.Data.IDbConnection)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pConn">資料庫連接物件</param>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.FetchRecord(System.Data.IDataReader)">
+            <summary>
+            擷取一列資料表記錄
+            </summary>
+            <param name="pRs"><c>IDataReader</c>資料擷取物件</param>
+            <returns>一列資料表記錄</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.SetRecord(System.String,System.Object)">
+            <summary>
+            新增一列資料表記錄之對應值
+            </summary>
+            <param name="pSqlStr">"INSERT INTO" SQL指令</param>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.SetField(System.String)">
+            <summary>
+            設定資料表建立所需之欄位與資料型態
+            </summary>
+            <param name="pSqlStr">"CREATE TABLE" SQL指令</param>
+            <returns>指令執行狀態</returns>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.SelectXXByDate(System.String)">
+            <summary>
+            依據[FLIGHT_NO], [DATE_TIME]篩選[dbo.FIDS_2DAY]資料表，[FLIGHT_NO]包含"XX"的航空公司代碼
+            </summary>
+            <param name="pDate">航班之作業日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.SelectByKey(System.String,System.String)">
+            <summary>
+            依據[FLIGHT_NO], [DATE_TIME]篩選[dbo.FIDS_2DAY]資料表
+            </summary>
+            <param name="pFlightNo">航班編號</param>
+            <param name="pDate">航班之作業日期(預設為系統時間之當日)</param>
+            <returns>
+            <para> 0: 依條件搜尋的筆數</para>
+            <para>-1: 例外錯誤</para>
+            </returns>
+            <remarks>使用"<c>RecordList</c>"取出所查詢的資料列</remarks>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.DAO.BRS.FIDS2Day.Update(System.Object)">
+            <summary>
+            更新一筆資料表記錄
+            </summary>
+            <param name="pObj">單筆資料列物件</param>
+            <returns>"UPDATE SET" SQL指令執行狀態</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.BodyChoice">
+            <summary>
+            傳遞訊息(BoardingBagList)之訊息內容種類之列舉項目
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Models.SrcMessage.BodyChoice.Truck">
+            <summary>
+            訊息種類為配送車之集合
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Models.SrcMessage.BodyChoice.Container">
+            <summary>
+            訊息種類為容器(籠車)之集合
+            </summary>
+        </member>
+        <member name="F:BRSPRJ_A3_WebAPI.Models.SrcMessage.BodyChoice.Baggage">
+            <summary>
+            訊息種類為裝載運送行李之集合
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Unloading_Records">
+            <summary>
+            運送行李卸載之基本資訊確認記錄類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Unloading_Records.ScanState">
+            <summary>
+            此件行李是否已從裝載之容器(籠車)取出並使用手持機掃瞄確認。
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Unloading_Records.ScanOper">
+            <summary>
+            將此件行李從裝載之容器(籠車)取出並使用手持機掃瞄確認，或是於裝載之容器(籠車)中未發現此件行李的作業人員
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Unloading_Records.ScanTime">
+            <summary>
+            將此件行李從裝載之容器(籠車)取出並使用手持機掃瞄確認，或是於裝載之容器(籠車)中未發現此件行李的時間
+            </summary>
+            <remarks>yyyyMMddHHmmss.fff (local time)</remarks>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Loading_Records">
+            <summary>
+            裝載運送行李之基本資訊運送記錄類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Loading_Records.LoadPlace">
+            <summary>
+            將此件行李裝載至容器(籠車)的地點、位置
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Loading_Records.LoadTime">
+            <summary>
+            將此件行李裝載至容器(籠車)的時間
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Baggage">
+            <summary>
+            裝載運送行李之基本資訊類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Baggage.Loading">
+            <summary>
+            裝載運送行李之基本資訊運送記錄
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Baggage.Unloading">
+            <summary>
+            運送行李卸載之基本資訊確認記錄
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Baggage">
+            <summary>
+            裝載運送行李之基本資訊識別類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Baggage.BagTag">
+            <summary>
+            行李條碼編號
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Baggage.FlightNo">
+            <summary>
+            行李所屬航班編號
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Baggage.STD">
+            <summary>
+            行李所屬航班之表訂出(入)境時間
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Baggage">
+            <summary>
+            裝載運送行李之基本資訊與處理狀態類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Baggage.ID">
+            <summary>
+            裝載運送行李之基本資訊識別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Baggage.Records">
+            <summary>
+            裝載運送行李之基本資訊運送記錄
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.LoadedBaggage">
+            <summary>
+            特定容器(籠車)所裝載之行李類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.LoadedBaggage.Baggage">
+            <summary>
+            此特定容器(籠車)裝載行李之基本資訊與處理狀態物件
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container">
+            <summary>
+            裝載行李之容器(籠車)之基本資訊運送記錄類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container.SealTime">
+            <summary>
+            將裝載行李之容器(籠車)貼上封籤條碼之時間
+            </summary>
+            <remarks>yyyyMMddHHmmss.fff (local time)</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container.LoadTime">
+            <summary>
+            將此已封籤容器(籠車)裝載至配送車的時間
+            </summary>
+            <remarks>yyyyMMddHHmmss.fff (local time)</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container.BagCount">
+            <summary>
+            此已封籤容器(籠車)所裝載之行李數量
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container.ScannedCount">
+            <summary>
+            此已封籤容器(籠車)中已掃描確認並卸載之行李數量
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container.GUID">
+            <summary>
+            此已封籤容器(籠車)之全域唯一識別碼
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container.Location">
+            <summary>
+            容器(籠車)裝載行李與封籤位置
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Container.PDASN">
+            <summary>
+            掃描此已封籤容器(籠車)之手持機序列號碼
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Container">
+            <summary>
+            裝載行李之容器(籠車)之基本資訊識別類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Container.ContainerTag">
+            <summary>
+            裝載行李之容器(籠車)的條碼編號
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Container.SealTag">
+            <summary>
+            裝載行李之容器(籠車)的封籤條碼編號
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.BasicInfo_Container">
+            <summary>
+            裝載運送容器(籠車)之基本資訊與裝載、封籤狀態類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.BasicInfo_Container.ID">
+            <summary>
+            裝載行李之容器(籠車)之基本資訊識別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.BasicInfo_Container.Records">
+            <summary>
+            裝載行李之容器(籠車)之基本資訊運送記錄
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Container">
+            <summary>
+            特定裝載運送容器(籠車)之基本資訊與所裝載之行李類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Container.BasicInfo">
+            <summary>
+            裝載運送容器(籠車)之基本資訊與裝載、封籤狀態物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Container.LoadedBaggage">
+            <summary>
+            特定容器(籠車)所裝載之行李列表
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Containers">
+            <summary>
+            特定配送車所裝載之已封籤容器(籠車)類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Containers.Container">
+            <summary>
+            已封籤容器(籠車)物件
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Truck">
+            <summary>
+            裝載運送配送車之基本資訊運送記錄類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Truck.DeliveryTime">
+            <summary>
+            裝載已封籤容器(籠車)之配送車出貨的時間
+            </summary>
+            <remarks>yyyyMMddHHmmss.fff (local time)</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Truck.ContainerCount">
+            <summary>
+            此已封籤配送車所裝載之已封籤容器(籠車)數量
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Truck.GUID">
+            <summary>
+            此已封籤配送車之全域唯一識別碼
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Truck.Location">
+            <summary>
+            配送車出貨位置
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Records_Truck.PDASN">
+            <summary>
+            掃描此已封籤配送車之手持機序列號碼
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Truck">
+            <summary>
+            裝載運送配送車之基本資訊識別類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Truck.TruckTag">
+            <summary>
+            裝載已封籤容器(籠車)之配送車的車牌號碼
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.ID_Truck.SealTag">
+            <summary>
+            裝載已封籤容器(籠車)之配送車的封籤條碼編號
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.BasicInfo_Truck">
+            <summary>
+            裝載運送配送車之基本資訊與封籤、運送狀態類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.BasicInfo_Truck.ID">
+            <summary>
+            裝載運送配送車之基本資訊識別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.BasicInfo_Truck.Records">
+            <summary>
+            裝載運送配送車之基本資訊運送記錄
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Truck">
+            <summary>
+            特定配送車之基本資訊與所運送之容器(籠車)類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Truck.BasicInfo">
+            <summary>
+            配送車之基本資訊與封籤、運送狀態物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Truck.Containers">
+            <summary>
+            特定配送車所所運送之容器(籠車)列表
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Body">
+            <summary>
+            傳遞訊息BoardingBagList之內容
+            </summary>
+            <remarks><c>Truck</c>或<c>Container</c>擇一使用</remarks>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Body.SealObj">
+            <summary>
+            已封籤配送車或容器(籠車)物件
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.Header">
+            <summary>
+            傳遞訊息BoardingBagList之標頭
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Header.Source">
+            <summary>
+            訊息傳送來源
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Header.Destination">
+            <summary>
+            訊息傳送目的地
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.Header.SendTime">
+            <summary>
+            訊息傳送時間
+            </summary>
+            <remarks>yyyyMMddHHmmss.fff (local time)</remarks>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.LoadingList">
+            <summary>
+            傳遞訊息BoardingBagList之最上層標籤類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.LoadingList.Header">
+            <summary>
+            傳遞訊息BoardingBagList之標頭物件
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.LoadingList.Body">
+            <summary>
+            傳遞訊息BoardingBagList之內容列表
+            </summary>
+            <remarks>所有配送車資訊列表 或 指定已封籤容器(籠車)物件</remarks>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.BoardingBagList">
+            <summary>
+            傳遞訊息BoardingBagList類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.BoardingBagList.LoadingList">
+            <summary>
+            傳遞訊息BoardingBagList之最上層標籤物件
+            </summary>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.CustomResolver">
+            <summary>
+            客製Json序列化物件器類別
+            </summary>
+        </member>
+        <member name="P:BRSPRJ_A3_WebAPI.Models.SrcMessage.CustomResolver.Choice">
+            <summary>
+            傳遞訊息(BoardingBagList)之訊息內容種類之列舉項目
+            </summary>
+        </member>
+        <member name="M:BRSPRJ_A3_WebAPI.Models.SrcMessage.CustomResolver.#ctor(BRSPRJ_A3_WebAPI.Models.SrcMessage.BodyChoice)">
+            <summary>
+            建構子
+            </summary>
+            <param name="choice">傳遞訊息(BoardingBagList)之訊息內容種類之列舉項目</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:BRSPRJ_A3_WebAPI.Models.SrcMessage.CustomResolver.CreateProperty(System.Reflection.MemberInfo,Newtonsoft.Json.MemberSerialization)" -->
+        <member name="M:BRSPRJ_A3_WebAPI.Models.SrcMessage.CustomResolver.ChooseOneOf(System.String)">
+            <summary>
+            客製化Json序列化物件轉換中SealObj物件名稱選擇
+            </summary>
+            <param name="name">原SealObj物件名稱</param>
+            <returns>依<c>BodyChoice</c>轉換後名稱</returns>
+        </member>
+        <member name="T:BRSPRJ_A3_WebAPI.Models.SrcMessage.JsonPropertyOnSealObjAttribute">
+            <summary>
+            Json轉換物件之各類別參數成員的客製屬性標示
+            </summary>
+        </member>
+    </members>
+</doc>

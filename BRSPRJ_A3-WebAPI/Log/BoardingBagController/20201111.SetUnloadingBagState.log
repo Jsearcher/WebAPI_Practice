@@ -1,0 +1,1596 @@
+13:25:18.682 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+13:25:18.706 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:31:04.957 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+13:31:04.983 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:33:55.822 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+13:33:55.847 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:36:21.775 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+13:36:21.802 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:38:15.143 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+13:38:15.172 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:40:34.500 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+13:40:34.528 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:41:40.279 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015",
+            "FlightNo": "XX0001",
+            "STD": "0820"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+13:41:40.308 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:43:00.192 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Truck": {
+          "BasicInfo": {
+            "ID": {
+              "TruckTag": "A3-A01",
+              "SealTag": "truckseal123"
+            },
+            "Records": {
+              "DeliveryTime": "20200925163928.321",
+              "ContainerCount": 3,
+              "GUID": "Car_truckseal123_20200925163928_3",
+              "Location": "A3",
+              "PDASN": "PDA-01"
+            }
+          },
+          "Containers": [
+            {
+              "Container": {
+                "BasicInfo": {
+                  "ID": {
+                    "ContainerTag": "315001",
+                    "SealTag": "0122001"
+                  },
+                  "Records": {
+                    "SealTime": "20200925163928.321",
+                    "LoadTime": "20200925163928.321",
+                    "BagCount": 5,
+                    "GUID": "Container_0122001_20200925163928_5",
+                    "Location": "A3",
+                    "PDASN": "PDA-01"
+                  }
+                },
+                "LoadedBaggage": [
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069011",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069012",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069013",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069014",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069015",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Container": {
+                "BasicInfo": {
+                  "ID": {
+                    "ContainerTag": "315002",
+                    "SealTag": "0122002"
+                  },
+                  "Records": {
+                    "SealTime": "20200925163928.321",
+                    "LoadTime": "20200925163928.321",
+                    "BagCount": 4,
+                    "GUID": "Container_0122002_20200925163928_4",
+                    "Location": "A3",
+                    "PDASN": "PDA-01"
+                  }
+                },
+                "LoadedBaggage": [
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029021",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029022",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029023",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029024",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Container": {
+                "BasicInfo": {
+                  "ID": {
+                    "ContainerTag": "315003",
+                    "SealTag": "0122003"
+                  },
+                  "Records": {
+                    "SealTime": "20200925163928.321",
+                    "LoadTime": "20200925163928.321",
+                    "BagCount": 3,
+                    "GUID": "Container_0122003_20200925163928_3",
+                    "Location": "A3",
+                    "PDASN": "PDA-01"
+                  }
+                },
+                "LoadedBaggage": [
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069031",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069032",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069033",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+13:43:00.219 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:43:00.422 ERROR - ERROR Code: 202
+13:43:58.431 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Truck": {
+          "BasicInfo": {
+            "ID": {
+              "TruckTag": "A3-A01",
+              "SealTag": "truckseal123"
+            },
+            "Records": {
+              "DeliveryTime": "20200925163928.321",
+              "ContainerCount": 3,
+              "GUID": "Car_truckseal123_20200925163928_3",
+              "Location": "A3",
+              "PDASN": "PDA-01"
+            }
+          },
+          "Containers": [
+            {
+              "Container": {
+                "BasicInfo": {
+                  "ID": {
+                    "ContainerTag": "315001",
+                    "SealTag": "0122001"
+                  },
+                  "Records": {
+                    "SealTime": "20200925163928.321",
+                    "LoadTime": "20200925163928.321",
+                    "BagCount": 5,
+                    "GUID": "Container_0122001_20200925163928_5",
+                    "Location": "A3",
+                    "PDASN": "PDA-01"
+                  }
+                },
+                "LoadedBaggage": [
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069011",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069012",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069013",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069014",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069015",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Container": {
+                "BasicInfo": {
+                  "ID": {
+                    "ContainerTag": "315002",
+                    "SealTag": "0122002"
+                  },
+                  "Records": {
+                    "SealTime": "20200925163928.321",
+                    "LoadTime": "20200925163928.321",
+                    "BagCount": 4,
+                    "GUID": "Container_0122002_20200925163928_4",
+                    "Location": "A3",
+                    "PDASN": "PDA-01"
+                  }
+                },
+                "LoadedBaggage": [
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029021",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029022",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029023",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890029024",
+                        "FlightNo": "XX0002",
+                        "STD": "0915"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Container": {
+                "BasicInfo": {
+                  "ID": {
+                    "ContainerTag": "315003",
+                    "SealTag": "0122003"
+                  },
+                  "Records": {
+                    "SealTime": "20200925163928.321",
+                    "LoadTime": "20200925163928.321",
+                    "BagCount": 3,
+                    "GUID": "Container_0122003_20200925163928_3",
+                    "Location": "A3",
+                    "PDASN": "PDA-01"
+                  }
+                },
+                "LoadedBaggage": [
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069031",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069032",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Baggage": {
+                      "ID": {
+                        "BagTag": "7890069033",
+                        "FlightNo": "XX0001",
+                        "STD": "0820"
+                      },
+                      "Records": {
+                        "Loading": {
+                          "LoadPlace": "A3",
+                          "LoadTime": "20200925163928.321"
+                        },
+                        "Unloading": {
+                          "ScanState": false,
+                          "ScanOper": "",
+                          "ScanTime": ""
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+13:43:58.451 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+13:43:58.628 ERROR - ERROR Code: 202
+14:19:18.258 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+14:19:18.287 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+14:19:19.963 ERROR - ERROR Code: 113
+14:21:44.613 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+14:21:44.632 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+14:21:45.876 ERROR - ERROR Code: 113
+14:22:19.191 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+14:22:19.216 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+14:22:58.652 ERROR - ERROR Code: 113
+14:32:11.833 INFO  - 所接收的行李裝載資料列表字串 = 
+{
+  "LoadingList": {
+    "Header": {
+      "Source": "SYS_BRS",
+      "Destination": "SYS_PDA",
+      "SendTime": "20200925163928.321"
+    },
+    "Body": [
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069011"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069012"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069013"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069014"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": true,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      },
+      {
+        "Baggage": {
+          "ID": {
+            "BagTag": "7890069015"
+          },
+          "Records": {
+            "Unloading": {
+              "ScanState": false,
+              "ScanOper": "Ming Wang",
+              "ScanTime": "20200925163928.321"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+
+14:32:11.861 INFO  - 開始解析行李裝載資料列表字串，Service_Mode = '0'，, setDate = '2020/10/22 上午 12:00:00'
+14:32:13.397 INFO  - 行李裝載資料列表Json字串解析驗證成功，並完成行李掃描確認資訊之修改

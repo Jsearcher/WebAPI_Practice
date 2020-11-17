@@ -1,0 +1,113 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://json-schema.brs.a3.ctci.com/BoardingBagList.json",
+    "additionalItems": false,
+    "title": "Baggage loading information - List specific baggage loaded in which container and truck",
+    "type": "object",
+
+    "properties": {
+        "LoadingList": {
+            "description": "Baggage loading or unloading state messaging",
+            "additionalProperties": false,
+            "properties": {
+                "Header": {
+                    "$ref": "Common/Header.json#"
+                },
+                "Body": {
+                    "$ref": "#/definitions/Body"
+                }
+            },
+            "required": [ "Header", "Body" ]
+        }
+    },
+    "required": [ "LoadingList" ],
+    "definitions": {
+        "Body": {
+            "description": "The required information (state) of loaded or unloaded baggage in each container deliveried by each truck",
+            "additionalProperties": false,
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "Truck": {
+                                "$ref": "#/definitions/Truck"
+                            }
+                        },
+                        "required": [ "Truck" ]
+                    },
+                    {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "Container": {
+                                "$ref": "#/definitions/Container"
+                            }
+                        },
+                        "required": [ "Container" ]
+                    },
+                    {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "Baggage": {
+                                "$ref": "Common/BagInfo.json#"
+                            }
+                        },
+                        "required": [ "Baggage" ]
+                    }
+                ]
+            },
+            "maxItems": 1000,
+            "minItems": 1
+        },
+        "Truck": {
+            "description": "Basic information and deliverying state of a truck which is requested in this message",
+            "additionalProperties": false,
+            "properties": {
+                "BasicInfo": {
+                    "$ref": "Common/TruckInfo.json#"
+                },
+                "Containers": {
+                    "description": "The information (state) of containers deliveried by a certain truck",
+                    "additionalProperties": false,
+                    "type": [ "array", "null" ],
+                    "items": {
+                        "properties": {
+                            "Container": {
+                                "$ref": "#/definitions/Container"
+                            }
+                        }
+                    },
+                    "maxItems": 1000
+                }
+            },
+            "required": [ "BasicInfo", "Containers" ]
+        },
+        "Container": {
+            "description": "Basic information and loading state of a container in a certain truck",
+            "additionalProperties": false,
+            "properties": {
+                "BasicInfo": {
+                    "$ref": "Common/ContainerInfo.json#"
+                },
+                "LoadedBaggage": {
+                    "description": "The information (state) of baggage loaded in a certain container",
+                    "additionalProperties": false,
+                    "type": [ "array", "null" ],
+                    "items": {
+                        "properties": {
+                            "Baggage": {
+                                "$ref": "Common/BagInfo.json#"
+                            }
+                        }
+                    },
+                    "maxItems": 1000
+                }
+            },
+            "required": [ "BasicInfo" ]
+        }
+    }
+}

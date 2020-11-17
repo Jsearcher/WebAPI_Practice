@@ -1,0 +1,22 @@
+09:47:48.502 ERROR - 字串未被辨認為有效的 DateTime。    於 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   於 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetNewLoadingBagList(JObject bagList, String ProcType) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 874
+
+09:48:56.545 ERROR - 字串未被辨認為有效的 DateTime。    於 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   於 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetNewLoadingBagList(JObject bagList, String ProcType) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 874
+
+09:50:06.278 ERROR - 字串未被辨認為有效的 DateTime。    於 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   於 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetNewLoadingBagList(JObject bagList, String ProcType) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 874
+
+09:54:59.630 ERROR - 字串未被辨認為有效的 DateTime。    於 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   於 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   於 BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.SelectByKey(String pTag, String pSealTag, String pLDate) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Models\DAO\A3\TruckInfo.cs: 行 203
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetNewLoadingBagList(JObject bagList, String ProcType) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 951
+
+09:57:04.984 ERROR - 字串未被辨認為有效的 DateTime。    於 System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   於 System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   於 BRSPRJ_A3_WebAPI.Models.DBTables.A3.TruckInfo.SelectByKey(String pTag, String pSealTag, String pLDate) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Models\DAO\A3\TruckInfo.cs: 行 203
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetNewLoadingBagList(JObject bagList, String ProcType) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 951
+

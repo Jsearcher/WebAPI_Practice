@@ -1,0 +1,105 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://json-schema.brs.a3.ctci.com/Common/BagInfo.json",
+    "additionalItems": false,
+    "title": "Baggage Information Structure - Recording baggage loading & unloading state",
+    "description": "Basic information and processing status of passengers' baggage",
+    "type": "object",
+
+    "properties": {
+        "ID": {
+            "description": "Identification of this baggage including [BagTag] and [FlightNo] for listing baggage members of loaded container",
+            "type": "object",
+            "properties": {
+                "BagTag": {
+                    "$ref": "#/definitions/BagTag"
+                },
+                "FlightNo": {
+                    "$ref": "#/definitions/FlightNo"
+                },
+                "STD": {
+                    "$ref": "#/definitions/STD"
+                }
+            },
+            "required": [ "BagTag" ]
+        },
+        "Records": {
+            "description": "The details of baggage loading and unloading state",
+            "type": "object",
+            "properties": {
+                "Loading": {
+                    "type": [ "object", "null" ],
+                    "properties": {
+                        "LoadPlace": {
+                            "$ref": "#/definitions/LoadPlace"
+                        },
+                        "LoadTime": {
+                            "$ref": "#/definitions/LoadTime"
+                        }
+                    },
+                    "required": [ "LoadPlace", "LoadTime" ]
+                },
+                "Unloading": {
+                    "type": [ "object", "null" ],
+                    "properties": {
+                        "ScanState": {
+                            "$ref": "#/definitions/ScanState"
+                        },
+                        "ScanOper": {
+                            "$ref": "#/definitions/ScanOper"
+                        },
+                        "ScanTime": {
+                            "$ref": "#/definitions/ScanTime"
+                        }
+                    },
+                    "required": [ "ScanState" ]
+                }
+            }
+        }
+    },
+    "required": [ "ID" ],
+    "definitions": {
+        "BagTag": {
+            "description": "Barcode number of baggage tag",
+            "type": "string",
+            "maxLength": 10,
+            "pattern": "^\\d{10}$"
+        },
+        "FlightNo": {
+            "description": "Flight number that would deliver baggage",
+            "type": [ "string", "null" ],
+            "pattern": "([0-9A-Z]{1,3}(\\.[A-Z]{3}(\\.X){0,1}){0,1})([0-9]{1,4})"
+        },
+        "STD": {
+            "description": "Scheduled Time of Departure (STD) flight",
+            "type": [ "string", "null" ],
+            "pattern": "^\\d{4}$"
+        },
+        "LoadPlace": {
+            "description": "A place (Location) where baggage was loaded into a container, e.g. A3",
+            "type": [ "string", "null" ],
+            "maxLength": 5,
+            "minLength": 1
+        },
+        "LoadTime": {
+            "description": "Timestamp of loading the baggage into a container, e.g. 20200925163928.321 (local time)",
+            "type": [ "string", "null" ],
+            "pattern": "^\\d{14}\\.\\d{3}$"
+        },
+        "ScanState": {
+            "description": "Whether the boarding baggage has been scanned to record as unloaded",
+            "type": [ "boolean", "null" ]
+        },
+        "ScanOper": {
+            "description": "The operator who unload and scan the baggage",
+            "type": [ "string", "null" ],
+            "maxLength": 30,
+            "minLength": 1
+        },
+        "ScanTime": {
+            "description": "Timestamp of scanning the baggage representing that it is unloaded, e.g. 20200925163928.321 (local time)",
+            "type": [ "string", "null" ],
+            "pattern": "^\\d{14}\\.\\d{3}$"
+        }
+    }
+}

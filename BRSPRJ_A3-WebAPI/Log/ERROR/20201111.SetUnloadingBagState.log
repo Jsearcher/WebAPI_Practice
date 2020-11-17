@@ -1,0 +1,4 @@
+13:38:15.679 ERROR - 程才更よ猭 'Newtonsoft.Json.JsonConvert.DeserializeObject<BRSPRJ_A3_WebAPI.Models.SrcMessage.Baggage>(string, params Newtonsoft.Json.JsonConverter[])' Τㄇ礚ま计     CallSite.Target(Closure , CallSite , Type , Object , JsonSerializerSettings )
+    System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+    BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.SetUnloadingBagState(JObject bagList)  D:\ASI Project\T2BRSも诀A3戈ざ\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: ︽ 740
+

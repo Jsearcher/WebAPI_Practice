@@ -1,0 +1,102 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://json-schema.brs.a3.ctci.com/Common/ContainerInfo.json",
+    "additionalItems": false,
+    "title": "Container Information Structure - Recording container sealing & loading state",
+    "description": "Basic information of a container which is used for loading with passengers' baggage at A3 station",
+    "type": "object",
+
+    "properties": {
+        "ID": {
+            "description": "Identification of this container including [ContainerTag] and [SealTag] for listing container members of truck",
+            "type": "object",
+            "properties": {
+                "ContainerTag": {
+                    "$ref": "#/definitions/ContainerTag"
+                },
+                "SealTag": {
+                    "$ref": "#/definitions/SealTag"
+                }
+            },
+            "required": [ "ContainerTag", "SealTag" ]
+        },
+        "Records": {
+            "description": "The details of container sealing and loading state",
+            "type": "object",
+            "properties": {
+                "SealTime": {
+                    "$ref": "#/definitions/SealTime"
+                },
+                "LoadTime": {
+                    "$ref": "#/definitions/LoadTime"
+                },
+                "BagCount": {
+                    "$ref": "#/definitions/BagCount"
+                },
+                "ScannedCount": {
+                    "$ref": "#/definitions/ScannedCount"
+                },
+                "GUID": {
+                    "$ref": "#/definitions/GUID"
+                },
+                "PDASN": {
+                    "$ref": "#/definitions/PDASN"
+                },
+                "Location": {
+                    "$ref": "#/definitions/Location"
+                }
+            },
+            "required": [ "BagCount" ]
+        }
+    },
+    "required": [ "ID" ],
+    "definitions": {
+        "ContainerTag": {
+            "description": "Barcode number of a container",
+            "type": "string",
+            "maxLength": 30,
+            "minimum": 1
+        },
+        "SealTag": {
+            "description": "Barcode number of a sealed container which has loaded several baggage and been sealed",
+            "type": "string",
+            "maxLength": 30,
+            "minimum": 1
+        },
+        "SealTime": {
+            "description": "Timestamp of sealing the container with several baggage, e.g. 20200925163928.321 (local time)",
+            "type": [ "string", "null" ],
+            "pattern": "^\\d{14}\\.\\d{3}$"
+        },
+        "LoadTime": {
+            "description": "Timestamp of loading the container into a truck (car), e.g. 20200925163928.321 (local time)",
+            "type": [ "string", "null" ],
+            "pattern": "^\\d{14}\\.\\d{3}$"
+        },
+        "BagCount": {
+            "description": "Total number of baggage loaded into the container",
+            "type": "integer"
+        },
+        "ScannedCount": {
+            "description": "Total number of scanned baggage in the container",
+            "type": "integer"
+        },
+        "GUID": {
+            "description": "The Globally Unique Identifier of a container",
+            "type": [ "string", "null" ],
+            "maxLength": 256,
+            "minLength": 1
+        },
+        "PDASN": {
+            "description": "The serial number of Personal Digital Assitant (PDA) which is used for scanning or recording the information of loaded baggage and sealed contianers",
+            "type": [ "string", "null" ],
+            "maxLength": 30
+        },
+        "Location": {
+            "description": "Location of a container",
+            "type": [ "string", "null" ],
+            "maxLength": 30,
+            "minLength": 1
+        }
+    }
+}

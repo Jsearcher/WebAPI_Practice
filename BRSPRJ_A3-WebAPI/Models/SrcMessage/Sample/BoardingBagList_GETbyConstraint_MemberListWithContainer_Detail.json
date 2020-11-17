@@ -1,0 +1,68 @@
+{
+    "LoadingList": {
+        "Header": {
+            "Source": "SYS_BRS",
+            "Destination": "SYS_PDA",
+            "SendTime": "20200925163928.321"
+        },
+        "Body": [
+            {
+                "Container": {
+                    "BasicInfo": {
+                        "ID": {
+                            "ContainerTag": "315001",
+                            "SealTag": "0122001"
+                        },
+                        "Records": {
+                            "SealTime": "20200925163928.321",
+                            "LoadTime": "20200925163928.321",
+                            "BagCount": 5,
+                            "ScannedCount": 0,
+                            "GUID": "Container_0122001_20200925163928_5",
+                            "Location": "A3",
+                            "PDASN": "PDA-01"
+                        }
+                    }
+                }
+            },
+            {
+                "Container": {
+                    "BasicInfo": {
+                        "ID": {
+                            "ContainerTag": "315002",
+                            "SealTag": "0122002"
+                        },
+                        "Records": {
+                            "SealTime": "20200925163928.321",
+                            "LoadTime": "20200925163928.321",
+                            "BagCount": 4,
+                            "ScannedCount": 0,
+                            "GUID": "Container_0122002_20200925163928_4",
+                            "Location": "A3",
+                            "PDASN": "PDA-01"
+                        }
+                    }
+                }
+            },
+            {
+                "Container": {
+                    "BasicInfo": {
+                        "ID": {
+                            "ContainerTag": "315003",
+                            "SealTag": "0122003"
+                        },
+                        "Records": {
+                            "SealTime": "20200925163928.321",
+                            "LoadTime": "20200925163928.321",
+                            "BagCount": 3,
+                            "ScannedCount": 0,
+                            "GUID": "Container_0122003_20200925163928_3",
+                            "Location": "A3",
+                            "PDASN": "PDA-01"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

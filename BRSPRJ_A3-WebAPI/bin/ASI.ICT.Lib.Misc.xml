@@ -1,0 +1,1438 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASI.ICT.Lib.Misc</name>
+    </assembly>
+    <members>
+        <member name="T:Lib.Misc.FormatLib">
+            <summary>
+            格式轉換相關處理類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.String2Int(System.String)">
+            <summary>
+            轉換數值字串為整數(32-bit integer)
+            </summary>
+            <param name="pString">數值字串</param>
+            <returns>
+            <para>32-bit之整數結果</para>
+            <para>-99999表示發生例外錯誤</para>
+            </returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.String2Long(System.String)">
+            <summary>
+            轉換數值字串為長整數(64-bit integer)
+            </summary>
+            <param name="pString">數值字串</param>
+            <returns>
+            <para>64-bit之整數結果</para>
+            <para>-99999表示發生例外錯誤</para>
+            </returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Double2Byte(System.Double)">
+            <summary>
+            轉換<c>double</c> 型別數值為8-bit整數
+            </summary>
+            <param name="pSrc"><c>double</c> 型別數值</param>
+            <returns>8-bit整數</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2Double(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>double</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>double</c> 型別數值</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Float2Byte(System.Single)">
+            <summary>
+            轉換<c>float</c> 型別數值為8-bit整數
+            </summary>
+            <param name="pSrc"><c>float</c> 型別數值</param>
+            <returns>8-bit整數</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2Float(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>float</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>float</c> 型別數值</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2Short(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>short</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>short</c> 型別數值</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2UShort(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>ushort</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>short</c> 型別數值</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Integer2Byte(System.Int32)">
+            <summary>
+            轉換<c>int</c> 型別數值為8-bit整數
+            </summary>
+            <param name="pSrc"><c>int</c> 型別數值</param>
+            <returns>8-bit整數</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2Integer(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>int</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>int</c> 型別數值</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2UInteger(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>uint</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>uint</c> 型別數值</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Long2Byte(System.Int64)">
+            <summary>
+            轉換<c>long</c> 型別數值為8-bit整數
+            </summary>
+            <param name="pSrc"><c>long</c> 型別數值</param>
+            <returns>8-bit整數</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2Long(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>long</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>long</c> 型別數值</returns>
+        </member>
+        <member name="M:Lib.Misc.FormatLib.Byte2ULong(System.Byte[])">
+            <summary>
+            轉換8-bit整數為<c>ulong</c> 型別數值
+            </summary>
+            <param name="pSrc">8-bit整數</param>
+            <returns><c>ulong</c> 型別數值</returns>
+        </member>
+        <member name="T:Lib.Misc.IPUtil">
+            <summary>
+            IP相關處理類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.IPUtil.GetAllLocalIPAddress">
+            <summary>
+            取得本機上所有的IP Address
+            </summary>
+            <returns>IP Address清單(Mac, IPv6, IPv4 including Loopback IP)</returns>
+        </member>
+        <member name="M:Lib.Misc.IPUtil.GetLocalIPAddress">
+            <summary>
+            取得本機上IPv4及非Loopback的IP Address
+            </summary>
+            <returns>IPv4 IP Address清單(IPv4 excluding Loopback IP)</returns>
+        </member>
+        <member name="M:Lib.Misc.IPUtil.UnpackIP(System.String)">
+            <summary>
+            解構IP Address (含@)
+            </summary>
+            <param name="pDest">目的地IP Address</param>
+            <returns>IP Address字串陣列</returns>
+        </member>
+        <member name="M:Lib.Misc.IPUtil.PingIP(System.String)">
+            <summary>
+            Ping指定的IP位址並回應結果
+            </summary>
+            <param name="pIP">測試IP位址</param>
+            <returns>Ping回應結果</returns>
+        </member>
+        <member name="M:Lib.Misc.IPUtil.GetValidIP(System.String)">
+            <summary>
+            驗證指定的IP位址為有效的
+            </summary>
+            <param name="pIP">驗證IP位址</param>
+            <returns>驗證後得IP位址</returns>
+        </member>
+        <member name="M:Lib.Misc.IPUtil.PingResponse(System.String,System.Int32)">
+            <summary>
+            Ping指定的IP位址並在重試次數內取得回應結果
+            </summary>
+            <param name="pIP">測試IP位址</param>
+            <param name="tryCount">重試次數</param>
+            <returns>Ping回應結果</returns>
+        </member>
+        <member name="T:Lib.Misc.PriorityQueue`2">
+            <summary>
+            FIFO佇列類別
+            </summary>
+            <typeparam name="TElement">指定放置佇列之物件內容型別</typeparam>
+            <typeparam name="TPriority">指定物件放置佇列之優先順序類別</typeparam>
+            <remarks>Reference from GitHub of Denis Shulepov/PriorityQueue (NuGet)</remarks>
+        </member>
+        <member name="T:Lib.Misc.PriorityQueue`2.Node">
+            <summary>
+            某一層佇列放置物件類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.PriorityQueue`2.Node.Priority">
+            <summary>
+            某一層佇列中放置物件的優先順序
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.PriorityQueue`2.Node.Element">
+            <summary>
+            某一層佇列中放置之物件內容
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Node.#ctor(`0,`1)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pElement">佇列中放置之物件</param>
+            <param name="pPriority">放置物件的優先順序</param>
+        </member>
+        <member name="T:Lib.Misc.PriorityQueue`2.NodeComparer">
+            <summary>
+            透過放置優先順序類別(<typeparamref name="TPriority"/>)對某一層佇列作比較
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.PriorityQueue`2.NodeComparer.comparer">
+            <summary>
+            物件比較器
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.NodeComparer.Compare(Lib.Misc.PriorityQueue{`0,`1}.Node,Lib.Misc.PriorityQueue{`0,`1}.Node)">
+            <summary>
+            比較兩個佇列放置物件的優先順序
+            </summary>
+            <param name="x">佇列放置物件<c>x</c></param>
+            <param name="y">佇列放置物件<c>y</c></param>
+            <returns>優先順序比較結果
+            <para>-1: <c>x</c>優先順序 小於 <c>y</c>優先順序；或是<c>x</c>為null</para>
+            <para> 0: <c>x</c>優先順序 等於 <c>y</c>優先順序；或是<c>x</c>與<c>y</c>皆為null</para>
+            <para> 1: <c>x</c>優先順序 大於 <c>y</c>優先順序；或是<c>y</c>為null</para>
+            </returns>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.NodeComparer.Compare(`1,`1)">
+            <summary>
+            比較兩個放置物件的優先順序
+            </summary>
+            <param name="x">佇列放置物件的優先順序<c>x</c></param>
+            <param name="y">佇列放置物件的優先順序<c>y</c></param>
+            <returns>優先順序比較結果
+            <para>-1: <c>x</c>優先順序 小於 <c>y</c>優先順序；或是<c>x</c>為null</para>
+            <para> 0: <c>x</c>優先順序 等於 <c>y</c>優先順序；或是<c>x</c>與<c>y</c>皆為null</para>
+            <para> 1: <c>x</c>優先順序 大於 <c>y</c>優先順序；或是<c>y</c>為null</para>
+            </returns>
+        </member>
+        <member name="F:Lib.Misc.PriorityQueue`2.sync">
+            <summary>
+            執行緒同步處理物件
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.PriorityQueue`2.nodes">
+            <summary>
+            佇列放置物件集合
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.PriorityQueue`2.comparer">
+            <summary>
+            佇列放置物件比較器
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.PriorityQueue`2.dataIsValueType">
+            <summary>
+            指定放置佇列之物件是否為數值類型
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.PriorityQueue`2.Capacity">
+            <summary>
+            佇列容量
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.PriorityQueue`2.Count">
+            <summary>
+            目前佇列中放置物件的數量
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.#ctor(System.Int32,System.Collections.Generic.IComparer{`1})">
+            <summary>
+            建構子
+            </summary>
+            <param name="pCapacity">初始佇列容量(須大於0，初始值為10)</param>
+            <param name="pComparer">佇列放置物件比較器</param>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Contains(`0)">
+            <summary>
+            確認目前佇列中是否包含指定放置物件之內容
+            </summary>
+            <param name="item">指定放置物件之內容</param>
+            <returns>確認是否包含結果</returns>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Enqueue(`0,`1)">
+            <summary>
+            將指定物件加入至佇列中
+            </summary>
+            <param name="item">指定類型(<typeparamref name="TElement"/>)之放置物件內容</param>
+            <param name="priority">指定類型(<typeparamref name="TPriority"/>)之優先順序物件</param>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Dequeue">
+            <summary>
+            將最高優先順序之佇列放置物件從集合中移除並取出其內容
+            </summary>
+            <returns>最高優先順序之佇列放置物件內容</returns>
+            <exception cref="T:System.InvalidOperationException">物件集合數量無法處理之例外錯誤</exception>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Peek">
+            <summary>
+            取出最高優先順序之佇列放置物件內容
+            </summary>
+            <returns>最高優先順序之佇列放置物件內容</returns>
+            <exception cref="T:System.InvalidOperationException">物件集合數量無法處理之例外錯誤</exception>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Clear">
+            <summary>
+            清除集合中所有佇列放置物件
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.UpdatePriority(`0,`1)">
+            <summary>
+            更新指定之佇列放置物件內容的優先順序
+            </summary>
+            <param name="item">指定類型(<typeparamref name="TElement"/>)之放置物件內容</param>
+            <param name="priority">指定類型(<typeparamref name="TPriority"/>)之優先順序物件</param>
+            <exception cref="T:System.ArgumentException">指定之放置物件內容找不到</exception>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.GetItemIndex(`0)">
+            <summary>
+            取得指定內容之佇列放置物件索引值
+            </summary>
+            <param name="item">指定放置物件的內容</param>
+            <returns>符合之佇列放置物件索引值</returns>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Equals(`0,`0)">
+            <summary>
+            檢查指定放置物件間是否相同
+            </summary>
+            <param name="a">放置物件<c>a</c></param>
+            <param name="b">放置物件<c>b</c></param>
+            <returns>檢查結果是否相同</returns>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Sink(System.Int32)">
+            <summary>
+            依比較器準則調整佇列放置物件於集合中的位置(優先次序)，不符則下沉
+            </summary>
+            <param name="i">目前調整位置索引值</param>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Sift(System.Int32)">
+            <summary>
+            依比較器準則調整佇列放置物件於集合中的位置(優先次序)，不符則上浮
+            </summary>
+            <param name="i">目前調整位置索引值</param>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.Swap(System.Int32,System.Int32)">
+            <summary>
+            數值交換
+            </summary>
+            <param name="i">數值<c>i</c></param>
+            <param name="j">數值<c>j</c></param>
+        </member>
+        <member name="M:Lib.Misc.PriorityQueue`2.CopyNodes">
+            <summary>
+            複製佇列放置物件集合並回傳
+            </summary>
+            <returns>複製的佇列放置物件集合</returns>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonPropertyBase">
+            <summary>
+            適用於 <c>appsettings.json</c> Json類型之組態設定處理基底類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonPropertyBase.AppSettingsDI`1">
+            <summary>
+            依賴類別注入服務之應用類別，取得指定之組態設定檔內容
+            </summary>
+            <typeparam name="T">對應之組態設定區段的依賴類別</typeparam>
+            <remarks>泛型<c>T</c>必須有公用無參數建構子(<c>public T() { }</c>)</remarks>
+        </member>
+        <member name="F:Lib.Misc.Property.JsonPropertyBase.AppSettingsDI`1.properties">
+            <summary>
+            對應之組態設定區段的依賴類別物件
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.AppSettingsDI`1.#ctor(Microsoft.Extensions.Options.IOptions{`0})">
+            <summary>
+            取得組態設定區段的依賴類別物件
+            </summary>
+            <param name="aprop">組態設定依賴轉換之物件參數</param>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2">
+            <summary>
+            系統組態設定(App configuration, System process property)相關處理基底類別
+            </summary>
+            <typeparam name="T1">為整個組態設定檔的依賴類別</typeparam>
+            <typeparam name="T2">為依賴類別注入服務應用的類別</typeparam>
+        </member>
+        <member name="F:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.allKeyPath">
+            <summary>
+            組態設定檔指定區段設定值之標籤名稱(key)及其節點路徑(path)
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.ConfigFilePath">
+            <summary>
+            系統組態設定檔之檔案路徑名稱
+            </summary>
+            <remarks>dll config path</remarks>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.SectionPath">
+            <summary>
+            系統組態設定檔之區段路徑
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.Config">
+            <summary>
+            目前的組態設定檔案物件
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.ConfigSection">
+            <summary>
+            系統組態設定檔之區段物件
+            </summary>
+            <remarks><c>依SectionPath</c>指定區段路徑之設定內容</remarks>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.ServiceProvider">
+            <summary>
+            類別依賴注入服務之提供物件
+            </summary>
+            <remarks>使用<c>GetService T</c>方法建立類別<c>T</c>之物件</remarks>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.IsSectionExisted">
+            <summary>
+            指定之系統組態設定檔是否存在
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionPath">系統組態設定檔之區段路徑，無指定填入<c>null</c>或<c>string.Empty</c></param>
+            <remarks>預設之系統組態設定檔之檔案路徑為 ".\appsettings.json"</remarks>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionPath">系統組態設定檔之區段路徑，無指定填入<c>null</c>或<c>string.Empty</c></param>
+            <param name="pConfigPath">系統組態設定檔之檔案路徑名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.GetAllPropertyNames">
+            <summary>
+            取得組態設定檔區段之內容中所有標籤名稱(key)
+            </summary>
+            <returns>組態標籤清單</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.GetProperty(System.String)">
+            <summary>
+            依標籤名稱(key)取得組態設定檔區段內容之設定值
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>對應標籤名稱(key)的組態設定值</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.GetConfigurationFile">
+            <summary>
+            取得並更新目前的組態設定檔案物件
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.Serialize(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            取得組態設定檔指定區段設定值之標籤名稱(key)及其節點路徑(path)
+            </summary>
+            <param name="config">目前的組態設定檔案物件(或子區段<c>ConfigurationSection</c>)</param>
+            <returns>所有設定值之(key, path)清單</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonPropertyBase.PropertySetting`2.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            組態設定依賴類別注入服務
+            </summary>
+            <param name="services">服務描述集合</param>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty">
+            <summary>
+            適用於 <c>appsettings.json</c> Json類型之組態設定處理類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.DBServer">
+            <summary>
+            DB相關組態設定參數類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.DBServer.ServerDB">
+            <summary>
+            DB連接參數
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.DBServer.FlightDB">
+            <summary>
+            飛航相關DB連皆參數
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.Queue">
+            <summary>
+            Queue相關組態設定參數類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.Queue.InternalQueue">
+            <summary>
+            內部佇列連接參數
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.Queue.ServiceQueue">
+            <summary>
+            外部Service佇列連接參數
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.Service">
+            <summary>
+            API服務相關組態設定參數類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.Service.ServiceURL">
+            <summary>
+            RESTful API連接參數
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.Basic">
+            <summary>
+            其他基本組態設定參數類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.Basic.ThisStation">
+            <summary>
+            本站伺服器代號
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.Basic.FLIGHTDB">
+            <summary>
+            RESTful API飛航相關IP網段參數
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.Basic.TimeSync">
+            <summary>
+            時間同步IP位址
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSetting">
+            <summary>
+            組態設定參數集合類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSetting.DBServer">
+            <summary>
+            DB相關組態設定參數類別物件
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSetting.Queue">
+            <summary>
+            Queue相關組態設定參數類別物件
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSetting.Service">
+            <summary>
+            API服務相關組態設定參數類別物件
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSetting.Basic">
+            <summary>
+            其他基本組態設定參數類別物件
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.AppSetting">
+            <summary>
+            組態設定參數根集合類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.AppSetting.AppPropSetting">
+            <summary>
+            組態設定參數集合類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSettingDI">
+            <summary>
+            依賴類別注入服務之應用類別，取得指定之組態設定檔內容(AppSetting)
+            </summary>
+            <remarks>
+            <para>泛型<c>T</c>之對應之組態設定區段的依賴類別，使用<c>AppPropSetting</c></para>
+            <para><c>properties</c>參數依 <c>AppPropSetting</c> 依賴類別存取目前組態設定值</para>
+            </remarks>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSettingDI.#ctor(Microsoft.Extensions.Options.IOptions{Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropSetting})">
+            <summary>
+            建構子
+            </summary>
+            <param name="aprop">組態設定依賴轉換之物件參數</param>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.AppSettingRootDI">
+            <summary>
+            依賴類別注入服務之應用類別，取得指定之組態設定檔內容(Root)
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ConfigProperty.AppSettingRootDI.#ctor(Microsoft.Extensions.Options.IOptions{Lib.Misc.Property.JsonSetting.ConfigProperty.AppSetting})">
+            <summary>
+            建構子
+            </summary>
+            <param name="aprop">組態設定依賴轉換之物件參數</param>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropertySetting">
+            <summary>
+            系統組態設定(App configuration)相關處理基底類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropertySetting.LazyHolder">
+            <summary>
+            靜態初始化通用物件實體類別
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropertySetting.LazyHolder.INSTANCE">
+            <summary>
+            <c>CommCollection</c> 通用物件實體
+            </summary>
+            <remarks>預設組態設定檔案"appsettings.json"位置與工作目錄相同，且系統組態設定檔之區段路徑為"AppPropSetting"</remarks>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropertySetting.ConfigRoot">
+            <summary>
+            系統組態設定(App configuration)根物件
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropertySetting.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionPath">系統組態設定檔之區段路徑，無指定填入<c>null</c>或<c>string.Empty</c></param>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropertySetting.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionPath">系統組態設定檔之區段路徑，無指定填入<c>null</c>或<c>string.Empty</c></param>
+            <param name="pConfigPath">系統組態設定檔之檔案路徑名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ConfigProperty.AppPropertySetting.Instance">
+            <summary>
+            取得系統組態設定(App configuration)物件實體
+            </summary>
+            <returns><c>AppPropertySetting</c> 通用物件實體</returns>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty">
+            <summary>
+            適用於 <c>appsettings.json</c> Json類型之組態設定處理類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty.Process">
+            <summary>
+            執行程序參數類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.Process.Process1">
+            <summary>
+            執行程序參數1
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.Process.Process2">
+            <summary>
+            執行程序參數2
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.Process.Process3">
+            <summary>
+            執行程序參數3
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.Process.Process4">
+            <summary>
+            執行程序參數4
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.Process.Process5">
+            <summary>
+            執行程序參數5
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropSetting">
+            <summary>
+            執行程序參數集合類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropSetting.Process">
+            <summary>
+            執行程序參數類別物件
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty.AppSetting">
+            <summary>
+            組態設定參數根集合類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.AppSetting.ProcPropSetting">
+            <summary>
+            執行程序參數集合類別物件
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropSettingDI">
+            <summary>
+            依賴類別注入服務之應用類別，取得指定之組態設定檔內容
+            </summary>
+            <remarks>
+            <para>泛型<c>T</c>之對應之組態設定區段的依賴類別，使用<c>AppPropSetting</c></para>
+            <para><c>properties</c>參數依 <c>AppPropSetting</c> 依賴類別存取目前組態設定值</para>
+            </remarks>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropSettingDI.#ctor(Microsoft.Extensions.Options.IOptions{Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropSetting})">
+            <summary>
+            建構子
+            </summary>
+            <param name="aprop">組態設定依賴轉換之物件參數</param>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty.AppSettingRootDI">
+            <summary>
+            依賴類別注入服務之應用類別，取得指定之組態設定檔內容(Root)
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ProcessProperty.AppSettingRootDI.#ctor(Microsoft.Extensions.Options.IOptions{Lib.Misc.Property.JsonSetting.ProcessProperty.AppSetting})">
+            <summary>
+            建構子
+            </summary>
+            <param name="aprop">組態設定依賴轉換之物件參數</param>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropertySetting">
+            <summary>
+            系統組態設定(System process property)相關處理基底類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropertySetting.LazyHolder">
+            <summary>
+            靜態初始化通用物件實體類別
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropertySetting.LazyHolder.INSTANCE">
+            <summary>
+            <c>CommCollection</c> 通用物件實體
+            </summary>
+            <remarks>預設組態設定檔案"appsettings.json"位置與工作目錄相同，且系統組態設定檔之區段路徑為"ProcPropSetting"</remarks>
+        </member>
+        <member name="P:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropertySetting.ConfigRoot">
+            <summary>
+            系統組態設定(System process property)根物件
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropertySetting.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionPath">系統組態設定檔之區段路徑，無指定填入<c>null</c>或<c>string.Empty</c></param>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropertySetting.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionPath">系統組態設定檔之區段路徑，無指定填入<c>null</c>或<c>string.Empty</c></param>
+            <param name="pConfigPath">系統組態設定檔之檔案路徑名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.JsonSetting.ProcessProperty.ProcPropertySetting.Instance">
+            <summary>
+            取得系統組態設定(System process property)物件實體
+            </summary>
+            <returns><c>ProcPropertySetting</c> 通用物件實體</returns>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLPropertyBase">
+            <summary>
+            適用於 <c>app.confg</c>, <c>web.config</c> XML類型之組態設定處理基底類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLPropertyBase.MyPropSection">
+            <summary>
+            組態設定檔區段之內容定義類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.MyPropSection.PropCollection">
+            <summary>
+            組態設定成員集合之定義類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.MyPropSection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLPropertyBase.PropertyElement">
+            <summary>
+            組態設定成員內容之定義類別
+            </summary>
+            <remarks>繼承此類別後可依需求自行新增所需參數之名稱</remarks>
+        </member>
+        <member name="F:Lib.Misc.Property.XMLPropertyBase.PropertyElement.KEY">
+            <summary>
+            組態設定標籤名稱(key)
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.XMLPropertyBase.PropertyElement.VALUE">
+            <summary>
+            組態設定值名稱(default property)
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertyElement.Key">
+            <summary>
+            組態設定標籤名稱(key)
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertyElement.Value">
+            <summary>
+            組態設定值
+            </summary>
+            <remarks>未給定參數值則為空值</remarks>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertyElement.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertyElement.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="key">組態設定標籤</param>
+            <param name="value">組態設定值</param>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection">
+            <summary>
+            組態設定成員集合之定義類別
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.Item(System.Int32)">
+            <summary>
+            排序索引值之組態設定成員
+            </summary>
+            <param name="index">排序索引值</param>
+            <returns> <c>PropertyElement</c> 指定之組態設定成員</returns>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.Item(System.String)">
+            <summary>
+            對應標籤名稱(key)之組態設定成員
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns><c>PropertyElement</c> 指定之組態設定成員</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.IndexOf(Lib.Misc.Property.XMLPropertyBase.PropertyElement)">
+            <summary>
+            特定 <c>PropertyElement</c> 組態設定成員之索引值
+            </summary>
+            <param name="property"><c>PropertyElement</c> 組態設定成員</param>
+            <returns>排序索引值</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.ContainsKey(System.String)">
+            <summary>
+            確認組態設定成員集合中是否包含指定的標籤名稱(key)
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>確認包含標籤名稱(key)狀態</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.GetAllPropertyNames">
+            <summary>
+            取得所有 <c>PropertyElement</c> 組態設定成員之標籤名稱(key)
+            </summary>
+            <returns>標籤名稱(key)清單</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.Add(Lib.Misc.Property.XMLPropertyBase.PropertyElement)">
+            <summary>
+            新增特定 <c>PropertyElement</c> 組態設定成員至組態設定集合
+            </summary>
+            <param name="property"><c>PropertyElement</c> 組態設定成員</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.Remove(Lib.Misc.Property.XMLPropertyBase.PropertyElement)">
+            <summary>
+            自組態設定集合移除特定 <c>PropertyElement</c> 組態設定成員
+            </summary>
+            <param name="property"><c>PropertyElement</c> 組態設定成員</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.Remove(System.String)">
+            <summary>
+            自組態設定集合依標籤名稱(key)移除特定 <c>PropertyElement</c> 組態設定成員
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.RemoveAt(System.Int32)">
+            <summary>
+            自組態設定集合依排序索引值移除特定 <c>PropertyElement</c> 組態設定成員
+            </summary>
+            <param name="index">排序索引值</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.Clear">
+            <summary>
+            自組態設定集合移除所有 <c>PropertyElement</c> 組態設定成員
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.CollectionType">
+            <summary>
+            組態設定類型(增刪修)
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.CreateNewElement">
+            <summary>
+            建立新的 <c>PropertyElement</c> 組態設定成員
+            </summary>
+            <returns><c>PropertyElement</c> 組態設定成員</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            取得特定 <c>PropertyElement</c> 組態設定成員之標簽名稱(key)
+            </summary>
+            <param name="element">特定 <c>PropertyElement</c> 組態設定成員</param>
+            <returns>標簽名稱(key)</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertiesCollection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1">
+            <summary>
+            系統組態設定(App configuration, System process property)相關處理基底類別
+            </summary>
+            <typeparam name="T">組態設定檔區段之內容定義類別</typeparam>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.ConfigFilePath">
+            <summary>
+            系統組態設定檔之檔案路徑名稱
+            </summary>
+            <remarks>dll config path</remarks>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.SectionName">
+            <summary>
+            系統組態設定檔之區段名稱
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.Config">
+            <summary>
+            目前的組態設定檔案物件
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.PropSection">
+            <summary>
+            組態設定檔區段之內容定義物件
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfigPath">系統組態設定檔之檔案路徑名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.#ctor(System.String,System.Configuration.Configuration)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfig">目前的組態設定檔案</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetPropSection">
+            <summary>
+            建立並取得目前此類別目標的組態設定檔區段之內容定義物件
+            </summary>
+            <returns>此類別目標的組態設定檔區段之內容定義物件</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetPropSection(System.String)">
+            <summary>
+            建立並取得指定組態設定檔區段之內容定義物件
+            </summary>
+            <param name="pSectionName">指定的系統組態設定檔之區段名稱</param>
+            <returns>指定組態設定檔區段之內容定義物件</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.ContainsKey(System.String)">
+            <summary>
+            確認組態設定檔區段之內容是否包含標籤名稱(key)
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>標籤名稱(key)確認包含狀態</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetAllPropertyNames">
+            <summary>
+            取得組態設定檔區段之內容中所有標簽名稱(key)
+            </summary>
+            <returns>組態設定標籤清單</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetProperty(System.String)">
+            <summary>
+            依標籤名稱(key)取得組態設定檔區段內容之設定值
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>對應標籤名稱(key)的組態設定值</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.SetProperty(System.String,System.String)">
+            <summary>
+            將標籤名稱(key)的組態設定檔區段內容之設定值變更
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="value">欲變更組態設定檔區段內容之設定值</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.AddProperty(System.Object,System.String)">
+            <summary>
+            新增特定型態之組態設定成員至組態設定集合
+            </summary>
+            <param name="elememnt">特定型態之組態設定成員</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.RemoveProperty(System.String,System.String)">
+            <summary>
+            自組態設定集合依標籤名稱(key)移除特定型態組態設定成員
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.RemoveAllProperties">
+            <summary>
+            自組態設定集合移除所有組態設定成員
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetConfigurationFile">
+            <summary>
+            取得並更新目前的組態設定檔案物件
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.CreateCustomSection">
+            <summary>
+            建立並儲存自定義組態設定檔案之區段
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ConfigProperty">
+            <summary>
+            應用程式中 <c>app.confg</c>或<c>web.config</c> 組態設定("AppConfigSetting")之處理類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection">
+            <summary>
+            組態設定檔區段之內容定義類別
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.DBCollection">
+            <summary>
+            DB相關組態設定成員集合名稱
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.QueueCollection">
+            <summary>
+            Queue相關組態設定成員集合名稱
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.ServiceCollection">
+            <summary>
+            Service相關組態設定成員集合名稱
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.BasicCollection">
+            <summary>
+            基本組態設定成員集合名稱
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.DBPropCollection">
+            <summary>
+            DB相關組態設定成員集合
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.QueuePropCollection">
+            <summary>
+            Queue相關組態設定成員集合
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.ServicePropCollection">
+            <summary>
+            Service相關組態設定成員集合
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.BasicPropCollection">
+            <summary>
+            基本組態設定成員集合
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropSection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropElement">
+            <summary>
+            組態設定成員內容之定義類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropElement.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropElement.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="key">組態設定標籤</param>
+            <param name="value">組態設定值</param>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropsCollection">
+            <summary>
+            組態設定成員集合之定義類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropsCollection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting">
+            <summary>
+            系統組態設定(App configuration)相關處理類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfigPath">系統組態設定檔之檔案路徑名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.#ctor(System.String,System.Configuration.Configuration)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfig">目前的組態設定檔案</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.AddProperty(System.Object,System.String)">
+            <summary>
+            新增特定型態之組態設定成員至組態設定集合
+            </summary>
+            <param name="elememnt">特定型態之組態設定成員</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.ContainsKey(System.String)">
+            <summary>
+            確認組態設定檔區段之內容是否包含標籤名稱(key)
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>標籤名稱(key)確認包含狀態</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.GetAllPropertyNames">
+            <summary>
+            取得組態設定檔區段之內容中所有標簽名稱(key)
+            </summary>
+            <returns>組態設定標籤清單</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.GetProperty(System.String)">
+            <summary>
+            依標籤名稱(key)取得組態設定檔區段內容之設定值
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>對應標籤名稱(key)的組態設定值</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.SetProperty(System.String,System.String)">
+            <summary>
+            將標籤名稱(key)的組態設定檔區段內容之設定值變更
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="value">欲變更組態設定檔區段內容之設定值</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.GetPropSection(System.String)">
+            <summary>
+            建立並取得指定組態設定檔區段之內容定義物件
+            </summary>
+            <param name="pSectionName">指定的系統組態設定檔之區段名稱</param>
+            <returns>指定組態設定檔區段之內容定義物件</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.RemoveAllProperties">
+            <summary>
+            自組態設定集合移除所有組態設定成員
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.RemoveProperty(System.String,System.String)">
+            <summary>
+            自組態設定集合依標籤名稱(key)移除特定型態組態設定成員
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ConfigProperty.AppPropertySetting.CreateCustomSection">
+            <summary>
+            建立並儲存 <c>AppPropElement</c> 組態設定檔案所需之區段
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ProcessProperty">
+            <summary>
+            應用程式中 <c>app.confg</c>或<c>web.config</c> 組態設定("ProcConfigSetting")之處理類別
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropSection">
+            <summary>
+            組態設定檔區段之內容定義類別
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropSection.ProcCollection">
+            <summary>
+            應用程式執行處理相關組態設定成員集合名稱
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropSection.ProcPropCollection">
+            <summary>
+            DB相關組態設定成員集合
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropSection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropElement">
+            <summary>
+            組態設定成員內容之定義類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropElement.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropElement.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="key">組態設定標籤</param>
+            <param name="value">組態設定值</param>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropsCollection">
+            <summary>
+            組態設定成員集合之定義類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropsCollection.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting">
+            <summary>
+            系統組態設定(System process property)相關處理基底類別
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfigPath">系統組態設定檔之檔案路徑名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.#ctor(System.String,System.Configuration.Configuration)">
+            <summary>
+            建構子
+            </summary>
+            <param name="pSectionName">系統組態設定檔之區段名稱</param>
+            <param name="pConfig">目前的組態設定檔案</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.AddProperty(System.Object,System.String)">
+            <summary>
+            新增特定型態之組態設定成員至組態設定集合
+            </summary>
+            <param name="elememnt">特定型態之組態設定成員</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.ContainsKey(System.String)">
+            <summary>
+            確認組態設定檔區段之內容是否包含標籤名稱(key)
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>標籤名稱(key)確認包含狀態</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.GetAllPropertyNames">
+            <summary>
+            取得組態設定檔區段之內容中所有標簽名稱(key)
+            </summary>
+            <returns>組態設定標籤清單</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.GetProperty(System.String)">
+            <summary>
+            依標籤名稱(key)取得組態設定檔區段內容之設定值
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <returns>對應標籤名稱(key)的組態設定值</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.SetProperty(System.String,System.String)">
+            <summary>
+            將標籤名稱(key)的組態設定檔區段內容之設定值變更
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="value">欲變更組態設定檔區段內容之設定值</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.GetPropSection(System.String)">
+            <summary>
+            建立並取得指定組態設定檔區段之內容定義物件
+            </summary>
+            <param name="pSectionName">指定的系統組態設定檔之區段名稱</param>
+            <returns>指定組態設定檔區段之內容定義物件</returns>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.RemoveAllProperties">
+            <summary>
+            自組態設定集合移除所有組態設定成員
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.RemoveProperty(System.String,System.String)">
+            <summary>
+            自組態設定集合依標籤名稱(key)移除特定型態組態設定成員
+            </summary>
+            <param name="key">標籤名稱(key)</param>
+            <param name="pCollectionName">特定組態設定成員集合之名稱</param>
+        </member>
+        <member name="M:Lib.Misc.Property.XMLSetting.ProcessProperty.ProcPropertySetting.CreateCustomSection">
+            <summary>
+            建立並儲存 <c>ProcPropElement</c> 組態設定檔案所需之區段
+            </summary>
+        </member>
+        <member name="T:Lib.Misc.Schema.XSD.XMLUtility">
+            <summary>
+            XML訊息相關的使用方法類別
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Schema.XSD.XMLUtility.schema">
+            <summary>
+            XML訊息之定義物件(XSD物件)
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Schema.XSD.XMLUtility.IsXMLValid">
+            <summary>
+            XML訊息之格式定義驗證結果
+            </summary>
+        </member>
+        <member name="P:Lib.Misc.Schema.XSD.XMLUtility.InvalidMessage">
+            <summary>
+            XML訊息之格式驗證錯誤說明
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Schema.XSD.XMLUtility.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="schemaUri">XSD實際路徑</param>
+        </member>
+        <member name="M:Lib.Misc.Schema.XSD.XMLUtility.Convert2XML``1(``0)">
+            <summary>
+            轉換訊息類別物件組合為XML訊息
+            </summary>
+            <typeparam name="T">物件類別型態</typeparam>
+            <param name="pObj">訊息類別物件</param>
+            <returns>XML訊息字串</returns>
+        </member>
+        <member name="M:Lib.Misc.Schema.XSD.XMLUtility.Convert2Object``1(System.String)">
+            <summary>
+            轉換XML訊息解組為訊息類別物件
+            </summary>
+            <typeparam name="T">物件類別型態</typeparam>
+            <param name="pXML">XML訊息字串</param>
+            <returns>訊息類別物件</returns>
+            <remarks>使用預設的XML訊息格式驗證錯誤觸發事件處理方法</remarks>
+        </member>
+        <member name="M:Lib.Misc.Schema.XSD.XMLUtility.Convert2Object``1(System.String,System.Xml.Schema.ValidationEventHandler)">
+            <summary>
+            轉換XML訊息解組為訊息類別物件
+            </summary>
+            <typeparam name="T">物件類別型態</typeparam>
+            <param name="pXML">XML訊息字串</param>
+            <param name="pVEH">XML訊息格式驗證錯誤觸發事件處理方法之委派</param>
+            <returns>訊息類別物件</returns>
+            <remarks>使用自訂的XML訊息格式驗證錯誤觸發事件處理方法加入事件委派(<c>ValidationEventHandler</c>)</remarks>
+        </member>
+        <member name="M:Lib.Misc.Schema.XSD.XMLUtility.ValidationCallBack(System.Object,System.Xml.Schema.ValidationEventArgs)">
+            <summary>
+            XML訊息格式驗證錯誤觸發事件處理方法
+            </summary>
+            <param name="sender">驗證錯誤觸發事件傳送者</param>
+            <param name="args">驗證錯誤觸發事件參數物件</param>
+        </member>
+        <member name="T:Lib.Misc.Time.DateTimeLib">
+            <summary>
+            日期時間處理與常用方法類別
+            </summary>
+        </member>
+        <member name="F:Lib.Misc.Time.DateTimeLib.mTime">
+            <summary>
+            物件之日期時間參數
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.#ctor">
+            <summary>
+            建構式
+            </summary>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.#ctor(System.DateTime)">
+            <summary>
+            建構式
+            </summary>
+            <param name="pTime"><c>DateTime</c> 格式之時間參數</param>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.#ctor(Lib.Misc.Time.DateTimeLib)">
+            <summary>
+            建構式
+            </summary>
+            <param name="pTime"><c>DateTimeLib</c> 此類別格式之時間參數</param>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.Ticks2Second(System.Int64)">
+            <summary>
+            轉換時間刻度為秒
+            </summary>
+            <param name="pTicks">時間刻度數</param>
+            <returns>秒數</returns>
+            <remarks>1時間刻度 = 1000 ms</remarks>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.MakeTime(System.String)">
+            <summary>
+            依據指定時間格式字串轉為DateTime資料型別
+            </summary>
+            <param name="pString">時間字串</param>
+            <returns><c>DateTime</c> 格式之時間參數</returns>
+            <remarks>時間格式 [yyyyMMddHHmmss.fff]</remarks>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.Format2DateTime(System.String,System.String)">
+            <summary>
+            依據指定時間格式字串轉為DateTime資料型別
+            </summary>
+            <param name="pString">時間字串</param>
+            <param name="pFormat">指定的時間格式</param>
+            <returns><c>DateTime</c> 格式之時間參數；轉換失敗則為<c>DateTime.MinValue</c></returns>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.String2Time_Concat(System.String)">
+            <summary>
+            依據指定時間格式字串轉為<c>DateTime</c> 格式之時間參數
+            </summary>
+            <param name="pString">時間字串</param>
+            <returns><c>DateTime</c> 格式之時間參數；轉換失敗則為<c>DateTime.MinValue</c></returns>
+            <remarks>時間格式 [yyyyMMddHHmmss.fff]</remarks>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.String2Time_Format(System.String)">
+            <summary>
+            依據指定時間格式字串轉為<c>DateTime</c> 格式之時間參數
+            </summary>
+            <param name="pString">時間字串</param>
+            <returns><c>DateTime</c> 格式之時間參數；轉換失敗則為<c>DateTime.MinValue</c></returns>
+            <remarks>時間格式 [yyyy/MM/DD HHmmss.fff]</remarks>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.Time2String_Concat(System.DateTime)">
+            <summary>
+            <c>DateTime</c> 格式之時間參數轉為時間格式字串
+            </summary>
+            <param name="pTime"><c>DateTime</c> 格式之時間參數</param>
+            <returns>時間字串</returns>
+            <remarks>時間格式 [yyyyMMDDHHmmss.fff]</remarks>
+        </member>
+        <member name="M:Lib.Misc.Time.DateTimeLib.Time2String_Format(System.DateTime)">
+            <summary>
+            <c>DateTime</c> 格式之時間參數轉為時間格式字串
+            </summary>
+            <param name="pTime"><c>DateTime</c> 格式之時間參數</param>
+            <returns>時間字串</returns>
+            <remarks>時間格式 [yyyy/MM/DD HHmmss.fff]</remarks>
+        </member>
+    </members>
+</doc>

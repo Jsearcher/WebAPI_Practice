@@ -1,0 +1,81 @@
+{
+    "LoadingList": {
+        "Header": {
+            "Source": "SYS_BRS",
+            "Destination": "SYS_PDA",
+            "SendTime": "20200925163928.321"
+        },
+        "Body": [
+            {
+                "Baggage": {
+                    "ID": {
+                        "BagTag": "7890069011"
+                    },
+                    "Records": {
+                        "Unloading": {
+                            "ScanState": true,
+                            "ScanOper": "Ming Wang",
+                            "ScanTime": "20200925163928.321"
+                        }
+                    }
+                }
+            },
+            {
+                "Baggage": {
+                    "ID": {
+                        "BagTag": "7890069012"
+                    },
+                    "Records": {
+                        "Unloading": {
+                            "ScanState": true,
+                            "ScanOper": "Ming Wang",
+                            "ScanTime": "20200925163928.321"
+                        }
+                    }
+                }
+            },
+            {
+                "Baggage": {
+                    "ID": {
+                        "BagTag": "7890069013"
+                    },
+                    "Records": {
+                        "Unloading": {
+                            "ScanState": true,
+                            "ScanOper": "Ming Wang",
+                            "ScanTime": "20200925163928.321"
+                        }
+                    }
+                }
+            },
+            {
+                "Baggage": {
+                    "ID": {
+                        "BagTag": "7890069014"
+                    },
+                    "Records": {
+                        "Unloading": {
+                            "ScanState": true,
+                            "ScanOper": "Ming Wang",
+                            "ScanTime": "20200925163928.321"
+                        }
+                    }
+                }
+            },
+            {
+                "Baggage": {
+                    "ID": {
+                        "BagTag": "7890069015"
+                    },
+                    "Records": {
+                        "Unloading": {
+                            "ScanState": false,
+                            "ScanOper": "Ming Wang",
+                            "ScanTime": "20200925163928.321"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

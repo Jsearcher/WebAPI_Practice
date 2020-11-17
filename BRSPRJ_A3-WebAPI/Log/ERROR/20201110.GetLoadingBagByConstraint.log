@@ -1,0 +1,30 @@
+09:29:43.739 ERROR - ERROR Code: 122
+10:11:52.199 ERROR - 值不能為 null。
+參數名稱: source    於 System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(String queryDate, String QueryType, String id, String ListType, String level, String Tag, String SealTag) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 558
+
+10:12:44.729 ERROR - 值不能為 null。
+參數名稱: source    於 System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(String queryDate, String QueryType, String id, String ListType, String level, String Tag, String SealTag) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 558
+
+10:14:53.325 ERROR - 值不能為 null。
+參數名稱: source    於 System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(String queryDate, String QueryType, String id, String ListType, String level, String Tag, String SealTag) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 558
+
+10:16:30.933 ERROR - 值不能為 null。
+參數名稱: source    於 System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(String queryDate, String QueryType, String id, String ListType, String level, String Tag, String SealTag) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 558
+
+10:19:38.198 ERROR - 值不能為 null。
+參數名稱: source    於 System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(String queryDate, String QueryType, String id, String ListType, String level, String Tag, String SealTag) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 558
+
+10:22:37.871 ERROR - 值不能為 null。
+參數名稱: source    於 System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(String queryDate, String QueryType, String id, String ListType, String level, String Tag, String SealTag) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 558
+
+10:28:09.871 ERROR - 值不能為 null。
+參數名稱: source    於 System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   於 BRSPRJ_A3_WebAPI.Controllers.BoardingBagController.GetLoadingBagByConstraint(String queryDate, String QueryType, String id, String ListType, String level, String Tag, String SealTag) 於 D:\ASI Project\T2BRS手持機A3資料介面\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Controllers\BoardingBagController.cs: 行 559
+
+11:07:33.005 ERROR - ERROR Code: 122

@@ -1,0 +1,64 @@
+14:44:22.272 ERROR - 更舱篈郎祇ネ岿粇: 把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+    System.Configuration.BaseConfigurationRecord.ThrowIfParseErrors(ConfigurationSchemaErrors schemaErrors)
+    System.Configuration.Configuration..ctor(String locationSubPath, Type typeConfigHost, Object[] hostInitConfigurationParams)
+    System.Configuration.ClientConfigurationHost.OpenExeConfiguration(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath)
+    System.Configuration.ConfigurationManager.OpenExeConfigurationImpl(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath, Boolean preLoad)
+    System.Configuration.ConfigurationManager.OpenExeConfiguration(String exePath)
+    Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetConfigurationFile()
+    BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.CreateCustomSection()  D:\ASI Project\T2BRSも诀A3戈ざ\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Models\ConfigScript\WebConfig.cs: ︽ 427
+把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ClientConfigPaths..ctor(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigPaths.GetPaths(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigurationHost.GetStreamName(String configPath)
+    System.Configuration.Internal.DelegatingConfigHost.GetStreamName(String configPath)
+    System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+
+15:03:48.022 ERROR - 更舱篈郎祇ネ岿粇: 把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+    System.Configuration.BaseConfigurationRecord.ThrowIfParseErrors(ConfigurationSchemaErrors schemaErrors)
+    System.Configuration.Configuration..ctor(String locationSubPath, Type typeConfigHost, Object[] hostInitConfigurationParams)
+    System.Configuration.ClientConfigurationHost.OpenExeConfiguration(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath)
+    System.Configuration.ConfigurationManager.OpenExeConfigurationImpl(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath, Boolean preLoad)
+    System.Configuration.ConfigurationManager.OpenExeConfiguration(String exePath)
+    Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetConfigurationFile()
+    BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.CreateCustomSection()  D:\ASI Project\T2BRSも诀A3戈ざ\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Models\ConfigScript\WebConfig.cs: ︽ 427
+把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ClientConfigPaths..ctor(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigPaths.GetPaths(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigurationHost.GetStreamName(String configPath)
+    System.Configuration.Internal.DelegatingConfigHost.GetStreamName(String configPath)
+    System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+
+15:08:05.812 ERROR - 更舱篈郎祇ネ岿粇: 把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+    System.Configuration.BaseConfigurationRecord.ThrowIfParseErrors(ConfigurationSchemaErrors schemaErrors)
+    System.Configuration.Configuration..ctor(String locationSubPath, Type typeConfigHost, Object[] hostInitConfigurationParams)
+    System.Configuration.ClientConfigurationHost.OpenExeConfiguration(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath)
+    System.Configuration.ConfigurationManager.OpenExeConfigurationImpl(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath, Boolean preLoad)
+    System.Configuration.ConfigurationManager.OpenExeConfiguration(String exePath)
+    Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetConfigurationFile()
+    BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.CreateCustomSection()  D:\ASI Project\T2BRSも诀A3戈ざ\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Models\ConfigScript\WebConfig.cs: ︽ 429
+把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ClientConfigPaths..ctor(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigPaths.GetPaths(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigurationHost.GetStreamName(String configPath)
+    System.Configuration.Internal.DelegatingConfigHost.GetStreamName(String configPath)
+    System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+
+15:08:06.971 ERROR - 更舱篈郎祇ネ岿粇: 把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+    System.Configuration.BaseConfigurationRecord.ThrowIfParseErrors(ConfigurationSchemaErrors schemaErrors)
+    System.Configuration.Configuration..ctor(String locationSubPath, Type typeConfigHost, Object[] hostInitConfigurationParams)
+    System.Configuration.ClientConfigurationHost.OpenExeConfiguration(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath)
+    System.Configuration.ConfigurationManager.OpenExeConfigurationImpl(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath, Boolean preLoad)
+    System.Configuration.ConfigurationManager.OpenExeConfiguration(String exePath)
+    Lib.Misc.Property.XMLPropertyBase.PropertySetting`1.GetConfigurationFile()
+    BRSPRJ_A3_WebAPI.Models.ConfigScript.WebConfig.WebPropertySetting.CreateCustomSection()  D:\ASI Project\T2BRSも诀A3戈ざ\Program\BRSPRJ_A3\BRSPRJ_A3-WebAPI\Models\ConfigScript\WebConfig.cs: ︽ 429
+把计 'exePath' 礚
+把计嘿: exePath     System.Configuration.ClientConfigPaths..ctor(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigPaths.GetPaths(String exePath, Boolean includeUserConfig)
+    System.Configuration.ClientConfigurationHost.GetStreamName(String configPath)
+    System.Configuration.Internal.DelegatingConfigHost.GetStreamName(String configPath)
+    System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+
